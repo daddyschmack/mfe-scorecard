@@ -1,0 +1,41 @@
+<div class="score-container">
+  <!-- Data Rows -->
+  @for (row of displayRows(); track row.key) {
+    <div class="score-line">
+      <!-- Row Title -->
+      <div class="stat-name" [class.player-name]="row.isTotalRow">
+        {{ row.label }}
+      </div>
+
+      <div class="hole-names">
+      <!-- Columns for Holes 1-18 -->
+      @for (hole of holes(); track $index; let i = $index) {
+        <div class="cell input-cell">
+
+          @if (row.isTotalRow) {
+            <!-- Calculated Total Score (Read Only) -->
+             <div class="score-display" [class]="getScoreSymbol(row.key, i)">
+               {{ hole.totalScore || '-' }}
+             </div>
+          } @else if (row.showCheckbox) {
+            <!-- Checkboxes -->
+            <input type="checkbox"
+                   [ngModel]="hole[row.key]"
+                   (ngModelChange)="updateStat(i, row.key, $event)">
+          } @else {
+            <!-- Number Inputs -->
+            <input type="number"
+                   [ngModel]="hole[row.key]"
+                   (ngModelChange)="updateStat(i, row.key, $event)">
+          }
+        </div>
+      }
+
+      <!-- 19th Column: Row Total -->
+      <div class="cell total-cell">
+        {{ getTotalStat(row.key) }}
+      </div>
+      </div>
+    </div>
+  }
+</div>

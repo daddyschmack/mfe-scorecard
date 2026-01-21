@@ -1,0 +1,99 @@
+/* Shared Score Styles */
+
+.score-line {
+  border: 1px solid #000;
+  display: flex;
+  background-color: #fff;
+
+  &.header-row {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+
+  & .hole-info {
+    background-color: #a13014;
+    color: #fff;
+  }
+
+  &:hover {
+    border: 2px solid purple;
+  }
+}
+
+.stat-name {
+  flex: 0 0 14rem; /* Fixed width: Don't grow, don't shrink, stay at 14rem */
+  display: grid;
+  grid-auto-flow: column; /* Forces items to flow horizontally */
+  align-items: center;
+  padding-left: 0.5rem;
+}
+
+.hole-names {
+  background-color: #f5f5f5;
+  flex: 1; /* Grow to fill all remaining space */
+  display: grid;
+  grid-template-columns: repeat(19, 1fr);
+
+  & .hole-info {
+    background-color: #a13014;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 2.5rem;
+  }
+}
+
+.player-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+input {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/* Hide Spinners on Number Inputs */
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.score-display {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* Score Coloring */
+.birdie, .eagle, .bogie, .ouch {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+}
+.birdie, .eagle { background: #fff; color: #000; }
+.bogie, .ouch { background: #fff; color: #000; border-width: 3px; border-radius: 4px; }
+.eagle, .ouch { border-style: double; }

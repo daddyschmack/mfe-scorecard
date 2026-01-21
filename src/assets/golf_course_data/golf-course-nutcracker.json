@@ -1,0 +1,2727 @@
+{
+  "robot": false,
+  "path": "\/bluegolf\/app\/course\/nutcracker\/",
+  "allowgps": true,
+  "allowShots": false,
+  "course": {
+    "nameAmplitude": "Nutcracker Golf Club",
+    "selectedteeid": "aa829371-6730-468a-9539-23506e0b3b57",
+    "tees": [
+      {
+        "par": 72,
+        "side": 0,
+        "color": "black",
+        "distancethishole": 405,
+        "iscustom": false,
+        "rating": "73.3",
+        "tourneyuuid": null,
+        "slope": 124,
+        "type": "MEN",
+        "uuid": "aa829371-6730-468a-9539-23506e0b3b57",
+        "hasHoleAllocations": true,
+        "unit": "yds",
+        "extra": "6769 yds (M-73.3\/124)",
+        "holeinfo": [
+          {
+            "par": 4,
+            "distance": 405,
+            "hcap": 7
+          },
+          {
+            "par": 4,
+            "distance": 347,
+            "hcap": 9
+          },
+          {
+            "par": 3,
+            "distance": 181,
+            "hcap": 15
+          },
+          {
+            "par": 4,
+            "distance": 396,
+            "hcap": 3
+          },
+          {
+            "par": 5,
+            "distance": 530,
+            "hcap": 11
+          },
+          {
+            "par": 4,
+            "distance": 432,
+            "hcap": 5
+          },
+          {
+            "par": 3,
+            "distance": 160,
+            "hcap": 13
+          },
+          {
+            "par": 4,
+            "distance": 412,
+            "hcap": 1
+          },
+          {
+            "par": 5,
+            "distance": 482,
+            "hcap": 17
+          },
+          {
+            "par": 4,
+            "distance": 407,
+            "hcap": 12
+          },
+          {
+            "par": 5,
+            "distance": 511,
+            "hcap": 18
+          },
+          {
+            "par": 4,
+            "distance": 383,
+            "hcap": 8
+          },
+          {
+            "par": 3,
+            "distance": 220,
+            "hcap": 4
+          },
+          {
+            "par": 4,
+            "distance": 401,
+            "hcap": 10
+          },
+          {
+            "par": 4,
+            "distance": 428,
+            "hcap": 2
+          },
+          {
+            "par": 5,
+            "distance": 492,
+            "hcap": 14
+          },
+          {
+            "par": 3,
+            "distance": 152,
+            "hcap": 16
+          },
+          {
+            "par": 4,
+            "distance": 430,
+            "hcap": 6
+          }
+        ],
+        "name": "Black",
+        "isdefault": true,
+        "isarchived": false,
+        "hasWHSId": true,
+        "sport": "golf",
+        "holes": [
+          {
+            "par": 4,
+            "distance": 405,
+            "handicap": 7
+          },
+          {
+            "par": 4,
+            "distance": 347,
+            "handicap": 9
+          },
+          {
+            "par": 3,
+            "distance": 181,
+            "handicap": 15
+          },
+          {
+            "par": 4,
+            "distance": 396,
+            "handicap": 3
+          },
+          {
+            "par": 5,
+            "distance": 530,
+            "handicap": 11
+          },
+          {
+            "par": 4,
+            "distance": 432,
+            "handicap": 5
+          },
+          {
+            "par": 3,
+            "distance": 160,
+            "handicap": 13
+          },
+          {
+            "par": 4,
+            "distance": 412,
+            "handicap": 1
+          },
+          {
+            "par": 5,
+            "distance": 482,
+            "handicap": 17
+          },
+          {
+            "par": 4,
+            "distance": 407,
+            "handicap": 12
+          },
+          {
+            "par": 5,
+            "distance": 511,
+            "handicap": 18
+          },
+          {
+            "par": 4,
+            "distance": 383,
+            "handicap": 8
+          },
+          {
+            "par": 3,
+            "distance": 220,
+            "handicap": 4
+          },
+          {
+            "par": 4,
+            "distance": 401,
+            "handicap": 10
+          },
+          {
+            "par": 4,
+            "distance": 428,
+            "handicap": 2
+          },
+          {
+            "par": 5,
+            "distance": 492,
+            "handicap": 14
+          },
+          {
+            "par": 3,
+            "distance": 152,
+            "handicap": 16
+          },
+          {
+            "par": 4,
+            "distance": 430,
+            "handicap": 6
+          }
+        ]
+      },
+      {
+        "par": 72,
+        "side": 0,
+        "color": "white",
+        "distancethishole": 358,
+        "iscustom": false,
+        "rating": "70.5",
+        "tourneyuuid": null,
+        "slope": 121,
+        "type": "MEN",
+        "uuid": "6beea92e-9112-4882-8ecc-60e6f71781de",
+        "hasHoleAllocations": true,
+        "unit": "yds",
+        "extra": "6164 yds (M-70.5\/121)",
+        "holeinfo": [
+          {
+            "par": 4,
+            "distance": 358,
+            "hcap": 7
+          },
+          {
+            "par": 4,
+            "distance": 339,
+            "hcap": 9
+          },
+          {
+            "par": 3,
+            "distance": 160,
+            "hcap": 15
+          },
+          {
+            "par": 4,
+            "distance": 371,
+            "hcap": 3
+          },
+          {
+            "par": 5,
+            "distance": 488,
+            "hcap": 11
+          },
+          {
+            "par": 4,
+            "distance": 402,
+            "hcap": 5
+          },
+          {
+            "par": 3,
+            "distance": 135,
+            "hcap": 13
+          },
+          {
+            "par": 4,
+            "distance": 385,
+            "hcap": 1
+          },
+          {
+            "par": 5,
+            "distance": 455,
+            "hcap": 17
+          },
+          {
+            "par": 4,
+            "distance": 345,
+            "hcap": 12
+          },
+          {
+            "par": 5,
+            "distance": 477,
+            "hcap": 18
+          },
+          {
+            "par": 4,
+            "distance": 321,
+            "hcap": 8
+          },
+          {
+            "par": 3,
+            "distance": 191,
+            "hcap": 4
+          },
+          {
+            "par": 4,
+            "distance": 375,
+            "hcap": 10
+          },
+          {
+            "par": 4,
+            "distance": 383,
+            "hcap": 2
+          },
+          {
+            "par": 5,
+            "distance": 459,
+            "hcap": 14
+          },
+          {
+            "par": 3,
+            "distance": 140,
+            "hcap": 16
+          },
+          {
+            "par": 4,
+            "distance": 380,
+            "hcap": 6
+          }
+        ],
+        "name": "White",
+        "isdefault": false,
+        "isarchived": false,
+        "hasWHSId": true,
+        "sport": "golf",
+        "holes": [
+          {
+            "par": 4,
+            "distance": 358,
+            "handicap": 7
+          },
+          {
+            "par": 4,
+            "distance": 339,
+            "handicap": 9
+          },
+          {
+            "par": 3,
+            "distance": 160,
+            "handicap": 15
+          },
+          {
+            "par": 4,
+            "distance": 371,
+            "handicap": 3
+          },
+          {
+            "par": 5,
+            "distance": 488,
+            "handicap": 11
+          },
+          {
+            "par": 4,
+            "distance": 402,
+            "handicap": 5
+          },
+          {
+            "par": 3,
+            "distance": 135,
+            "handicap": 13
+          },
+          {
+            "par": 4,
+            "distance": 385,
+            "handicap": 1
+          },
+          {
+            "par": 5,
+            "distance": 455,
+            "handicap": 17
+          },
+          {
+            "par": 4,
+            "distance": 345,
+            "handicap": 12
+          },
+          {
+            "par": 5,
+            "distance": 477,
+            "handicap": 18
+          },
+          {
+            "par": 4,
+            "distance": 321,
+            "handicap": 8
+          },
+          {
+            "par": 3,
+            "distance": 191,
+            "handicap": 4
+          },
+          {
+            "par": 4,
+            "distance": 375,
+            "handicap": 10
+          },
+          {
+            "par": 4,
+            "distance": 383,
+            "handicap": 2
+          },
+          {
+            "par": 5,
+            "distance": 459,
+            "handicap": 14
+          },
+          {
+            "par": 3,
+            "distance": 140,
+            "handicap": 16
+          },
+          {
+            "par": 4,
+            "distance": 380,
+            "handicap": 6
+          }
+        ]
+      },
+      {
+        "par": 72,
+        "side": 0,
+        "color": "white-gold",
+        "distancethishole": 358,
+        "iscustom": false,
+        "rating": "69.4",
+        "tourneyuuid": null,
+        "slope": 120,
+        "type": "MEN",
+        "uuid": "768c5188-554b-4bf5-90ae-6c3224a6fd7f",
+        "hasHoleAllocations": true,
+        "unit": "yds",
+        "extra": "5944 yds (M-69.4\/120)",
+        "holeinfo": [
+          {
+            "par": 4,
+            "distance": 358,
+            "hcap": 7
+          },
+          {
+            "par": 4,
+            "distance": 339,
+            "hcap": 9
+          },
+          {
+            "par": 3,
+            "distance": 150,
+            "hcap": 15
+          },
+          {
+            "par": 4,
+            "distance": 340,
+            "hcap": 3
+          },
+          {
+            "par": 5,
+            "distance": 488,
+            "hcap": 11
+          },
+          {
+            "par": 4,
+            "distance": 351,
+            "hcap": 5
+          },
+          {
+            "par": 3,
+            "distance": 135,
+            "hcap": 13
+          },
+          {
+            "par": 4,
+            "distance": 350,
+            "hcap": 1
+          },
+          {
+            "par": 5,
+            "distance": 455,
+            "hcap": 17
+          },
+          {
+            "par": 4,
+            "distance": 345,
+            "hcap": 12
+          },
+          {
+            "par": 5,
+            "distance": 477,
+            "hcap": 18
+          },
+          {
+            "par": 4,
+            "distance": 321,
+            "hcap": 8
+          },
+          {
+            "par": 3,
+            "distance": 181,
+            "hcap": 4
+          },
+          {
+            "par": 4,
+            "distance": 375,
+            "hcap": 10
+          },
+          {
+            "par": 4,
+            "distance": 343,
+            "hcap": 2
+          },
+          {
+            "par": 5,
+            "distance": 459,
+            "hcap": 14
+          },
+          {
+            "par": 3,
+            "distance": 140,
+            "hcap": 16
+          },
+          {
+            "par": 4,
+            "distance": 337,
+            "hcap": 6
+          }
+        ],
+        "name": "White\/Gold Combo",
+        "isdefault": false,
+        "isarchived": false,
+        "hasWHSId": true,
+        "sport": "golf",
+        "holes": [
+          {
+            "par": 4,
+            "distance": 358,
+            "handicap": 7
+          },
+          {
+            "par": 4,
+            "distance": 339,
+            "handicap": 9
+          },
+          {
+            "par": 3,
+            "distance": 150,
+            "handicap": 15
+          },
+          {
+            "par": 4,
+            "distance": 340,
+            "handicap": 3
+          },
+          {
+            "par": 5,
+            "distance": 488,
+            "handicap": 11
+          },
+          {
+            "par": 4,
+            "distance": 351,
+            "handicap": 5
+          },
+          {
+            "par": 3,
+            "distance": 135,
+            "handicap": 13
+          },
+          {
+            "par": 4,
+            "distance": 350,
+            "handicap": 1
+          },
+          {
+            "par": 5,
+            "distance": 455,
+            "handicap": 17
+          },
+          {
+            "par": 4,
+            "distance": 345,
+            "handicap": 12
+          },
+          {
+            "par": 5,
+            "distance": 477,
+            "handicap": 18
+          },
+          {
+            "par": 4,
+            "distance": 321,
+            "handicap": 8
+          },
+          {
+            "par": 3,
+            "distance": 181,
+            "handicap": 4
+          },
+          {
+            "par": 4,
+            "distance": 375,
+            "handicap": 10
+          },
+          {
+            "par": 4,
+            "distance": 343,
+            "handicap": 2
+          },
+          {
+            "par": 5,
+            "distance": 459,
+            "handicap": 14
+          },
+          {
+            "par": 3,
+            "distance": 140,
+            "handicap": 16
+          },
+          {
+            "par": 4,
+            "distance": 337,
+            "handicap": 6
+          }
+        ]
+      },
+      {
+        "par": 72,
+        "side": 0,
+        "color": "gold",
+        "distancethishole": 318,
+        "iscustom": false,
+        "rating": "67.1",
+        "tourneyuuid": null,
+        "slope": 113,
+        "type": "MEN",
+        "uuid": "66ab7c04-f9b1-46f2-9df9-6d41ff6047bc",
+        "hasHoleAllocations": true,
+        "unit": "yds",
+        "extra": "5525 yds (M-67.1\/113)",
+        "holeinfo": [
+          {
+            "par": 4,
+            "distance": 318,
+            "hcap": 7
+          },
+          {
+            "par": 4,
+            "distance": 323,
+            "hcap": 9
+          },
+          {
+            "par": 3,
+            "distance": 117,
+            "hcap": 15
+          },
+          {
+            "par": 4,
+            "distance": 340,
+            "hcap": 3
+          },
+          {
+            "par": 5,
+            "distance": 443,
+            "hcap": 11
+          },
+          {
+            "par": 4,
+            "distance": 351,
+            "hcap": 5
+          },
+          {
+            "par": 3,
+            "distance": 118,
+            "hcap": 13
+          },
+          {
+            "par": 4,
+            "distance": 350,
+            "hcap": 1
+          },
+          {
+            "par": 5,
+            "distance": 420,
+            "hcap": 17
+          },
+          {
+            "par": 4,
+            "distance": 326,
+            "hcap": 12
+          },
+          {
+            "par": 5,
+            "distance": 410,
+            "hcap": 18
+          },
+          {
+            "par": 4,
+            "distance": 301,
+            "hcap": 8
+          },
+          {
+            "par": 3,
+            "distance": 172,
+            "hcap": 4
+          },
+          {
+            "par": 4,
+            "distance": 329,
+            "hcap": 10
+          },
+          {
+            "par": 4,
+            "distance": 343,
+            "hcap": 2
+          },
+          {
+            "par": 5,
+            "distance": 409,
+            "hcap": 14
+          },
+          {
+            "par": 3,
+            "distance": 118,
+            "hcap": 16
+          },
+          {
+            "par": 4,
+            "distance": 337,
+            "hcap": 6
+          }
+        ],
+        "name": "Gold",
+        "isdefault": false,
+        "isarchived": false,
+        "hasWHSId": true,
+        "sport": "golf",
+        "holes": [
+          {
+            "par": 4,
+            "distance": 318,
+            "handicap": 7
+          },
+          {
+            "par": 4,
+            "distance": 323,
+            "handicap": 9
+          },
+          {
+            "par": 3,
+            "distance": 117,
+            "handicap": 15
+          },
+          {
+            "par": 4,
+            "distance": 340,
+            "handicap": 3
+          },
+          {
+            "par": 5,
+            "distance": 443,
+            "handicap": 11
+          },
+          {
+            "par": 4,
+            "distance": 351,
+            "handicap": 5
+          },
+          {
+            "par": 3,
+            "distance": 118,
+            "handicap": 13
+          },
+          {
+            "par": 4,
+            "distance": 350,
+            "handicap": 1
+          },
+          {
+            "par": 5,
+            "distance": 420,
+            "handicap": 17
+          },
+          {
+            "par": 4,
+            "distance": 326,
+            "handicap": 12
+          },
+          {
+            "par": 5,
+            "distance": 410,
+            "handicap": 18
+          },
+          {
+            "par": 4,
+            "distance": 301,
+            "handicap": 8
+          },
+          {
+            "par": 3,
+            "distance": 172,
+            "handicap": 4
+          },
+          {
+            "par": 4,
+            "distance": 329,
+            "handicap": 10
+          },
+          {
+            "par": 4,
+            "distance": 343,
+            "handicap": 2
+          },
+          {
+            "par": 5,
+            "distance": 409,
+            "handicap": 14
+          },
+          {
+            "par": 3,
+            "distance": 118,
+            "handicap": 16
+          },
+          {
+            "par": 4,
+            "distance": 337,
+            "handicap": 6
+          }
+        ]
+      },
+      {
+        "par": 72,
+        "side": 0,
+        "color": "red",
+        "distancethishole": 287,
+        "iscustom": false,
+        "rating": "64.9",
+        "tourneyuuid": null,
+        "slope": 109,
+        "type": "MEN",
+        "uuid": "7ab6b88b-3a33-4a8b-b75f-e8bcb52c5c6a",
+        "hasHoleAllocations": true,
+        "unit": "yds",
+        "extra": "5044 yds (M-64.9\/109)",
+        "holeinfo": [
+          {
+            "par": 4,
+            "distance": 287,
+            "hcap": 7
+          },
+          {
+            "par": 4,
+            "distance": 272,
+            "hcap": 9
+          },
+          {
+            "par": 3,
+            "distance": 100,
+            "hcap": 15
+          },
+          {
+            "par": 4,
+            "distance": 312,
+            "hcap": 3
+          },
+          {
+            "par": 5,
+            "distance": 409,
+            "hcap": 11
+          },
+          {
+            "par": 4,
+            "distance": 313,
+            "hcap": 5
+          },
+          {
+            "par": 3,
+            "distance": 104,
+            "hcap": 13
+          },
+          {
+            "par": 4,
+            "distance": 323,
+            "hcap": 1
+          },
+          {
+            "par": 5,
+            "distance": 388,
+            "hcap": 17
+          },
+          {
+            "par": 4,
+            "distance": 293,
+            "hcap": 12
+          },
+          {
+            "par": 5,
+            "distance": 379,
+            "hcap": 18
+          },
+          {
+            "par": 4,
+            "distance": 293,
+            "hcap": 8
+          },
+          {
+            "par": 3,
+            "distance": 166,
+            "hcap": 4
+          },
+          {
+            "par": 4,
+            "distance": 308,
+            "hcap": 10
+          },
+          {
+            "par": 4,
+            "distance": 310,
+            "hcap": 2
+          },
+          {
+            "par": 5,
+            "distance": 377,
+            "hcap": 14
+          },
+          {
+            "par": 3,
+            "distance": 102,
+            "hcap": 16
+          },
+          {
+            "par": 4,
+            "distance": 308,
+            "hcap": 6
+          }
+        ],
+        "name": "Red",
+        "isdefault": false,
+        "isarchived": false,
+        "hasWHSId": true,
+        "sport": "golf",
+        "holes": [
+          {
+            "par": 4,
+            "distance": 287,
+            "handicap": 7
+          },
+          {
+            "par": 4,
+            "distance": 272,
+            "handicap": 9
+          },
+          {
+            "par": 3,
+            "distance": 100,
+            "handicap": 15
+          },
+          {
+            "par": 4,
+            "distance": 312,
+            "handicap": 3
+          },
+          {
+            "par": 5,
+            "distance": 409,
+            "handicap": 11
+          },
+          {
+            "par": 4,
+            "distance": 313,
+            "handicap": 5
+          },
+          {
+            "par": 3,
+            "distance": 104,
+            "handicap": 13
+          },
+          {
+            "par": 4,
+            "distance": 323,
+            "handicap": 1
+          },
+          {
+            "par": 5,
+            "distance": 388,
+            "handicap": 17
+          },
+          {
+            "par": 4,
+            "distance": 293,
+            "handicap": 12
+          },
+          {
+            "par": 5,
+            "distance": 379,
+            "handicap": 18
+          },
+          {
+            "par": 4,
+            "distance": 293,
+            "handicap": 8
+          },
+          {
+            "par": 3,
+            "distance": 166,
+            "handicap": 4
+          },
+          {
+            "par": 4,
+            "distance": 308,
+            "handicap": 10
+          },
+          {
+            "par": 4,
+            "distance": 310,
+            "handicap": 2
+          },
+          {
+            "par": 5,
+            "distance": 377,
+            "handicap": 14
+          },
+          {
+            "par": 3,
+            "distance": 102,
+            "handicap": 16
+          },
+          {
+            "par": 4,
+            "distance": 308,
+            "handicap": 6
+          }
+        ]
+      }
+    ],
+    "handle": "nutcracker",
+    "uuid": "3a1ce874-48fc-4c52-8052-01fe2bbb939b",
+    "cover": "https:\/\/logos.bluegolf.com\/nutcracker\/cover.jpg",
+    "path": "\/api\/app\/course\/nutcracker\/",
+    "unit": "Yards",
+    "profilePhoto": "https:\/\/logos.bluegolf.com\/nutcracker\/profile.png",
+    "tee": {
+      "par": 72,
+      "color": "black",
+      "extra": "6769 yds (M-73.3\/124)",
+      "name": "Black",
+      "rating": "73.3",
+      "slope": 124,
+      "uuid": "aa829371-6730-468a-9539-23506e0b3b57",
+      "sport": "golf"
+    },
+    "name": "Nutcracker GC",
+    "hasAerial": true,
+    "abbr": "Nutcracker",
+    "selectedtee": "Black"
+  },
+  "isHcapPosted": false,
+  "showLoginPrompt": true,
+  "holes": [
+    {
+      "par": 4,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.361953%2C-97.670730&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.360768%2C-97.669191&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 12.956241886262855,
+        "rotation": -1.4526816846705457,
+        "lon": -97.66919063839453,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": -12.646290244930947,
+            "name": "green_front",
+            "y": -5.231469216680588
+          },
+          {
+            "x": 0.9071783147507482,
+            "name": "green_center",
+            "y": -3.2353926643289483
+          },
+          {
+            "x": 13.519433778412479,
+            "name": "green_back",
+            "y": -2.1264612470562096
+          }
+        ],
+        "depth": 22,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.360768%2C-97.669191&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94121.3094383664,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.14177086922,
+        "lat": 32.36076817576879,
+        "imageScale": 2.626156291700846
+      },
+      "test": "test",
+      "distance": 405,
+      "maskScale": 0.8838801509935308,
+      "handicap": 7,
+      "rotation": -2.0829989816016385,
+      "lon": -97.67073037093562,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": -190.84252495178464,
+          "name": "tee",
+          "y": 54.61722885054655
+        },
+        {
+          "x": 54.813349129623816,
+          "name": "dogleg",
+          "y": -78.01097449861732
+        },
+        {
+          "x": 132.27495233572085,
+          "name": "green_front",
+          "y": -136.6734490569163
+        },
+        {
+          "x": 145.82837987178186,
+          "name": "green_center",
+          "y": -134.67737241740656
+        },
+        {
+          "x": 158.44059716068534,
+          "name": "green_back",
+          "y": -133.56844095171255
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.360749,
+          "centerlon": -97.669181,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.360721,
+          "backlon": -97.669047,
+          "centerlat": 32.360739,
+          "type": "green",
+          "frontlon": -97.669325
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.361953%2C-97.670730&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.36195347877106,
+      "imageScale": 0.8957788171469908
+    },
+    {
+      "par": 4,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.359866%2C-97.667868&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=320x320&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.359011%2C-97.666811&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 8.928811327655682,
+        "rotation": -1.1335454262901958,
+        "lon": -97.66681092601426,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": -16.19614009056767,
+            "name": "green_front",
+            "y": -10.49667355870838
+          },
+          {
+            "x": 3.287345368119281,
+            "name": "green_center",
+            "y": -4.397552452580167
+          },
+          {
+            "x": 18.441167391839702,
+            "name": "green_back",
+            "y": 5.693720651518568
+          }
+        ],
+        "depth": -1,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.359011%2C-97.666811&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94123.11815646345,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.11102829268,
+        "lat": 32.359010655776736,
+        "imageScale": 1.8098540475274627
+      },
+      "test": "test",
+      "distance": 347,
+      "maskScale": 1.2562255619027087,
+      "handicap": 9,
+      "rotation": -2.653101241938717,
+      "lon": -97.66786779543223,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": -24.773083585040126,
+          "name": "tee",
+          "y": 140.70977314990387
+        },
+        {
+          "x": -13.855044736472223,
+          "name": "dogleg",
+          "y": -55.349310061697906
+        },
+        {
+          "x": 83.27785260083982,
+          "name": "green_front",
+          "y": -105.36211918395941
+        },
+        {
+          "x": 117.91438963684567,
+          "name": "green_center",
+          "y": -89.17171977836585
+        },
+        {
+          "x": 102.7609046834259,
+          "name": "green_back",
+          "y": -99.26299612067248
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.359062,
+          "centerlon": -97.666776,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.358916,
+          "backlon": -97.666615,
+          "centerlat": 32.358971,
+          "type": "green",
+          "frontlon": -97.666983
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.359866%2C-97.667868&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=18",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.359866122910226,
+      "imageScale": 0.636579182268135
+    },
+    {
+      "par": 3,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.359973%2C-97.666785&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=320x320&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.360632%2C-97.666592&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 12.623536131903414,
+        "rotation": 0.17844260801567202,
+        "lon": -97.66659190931513,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": 4.979899447399186,
+            "name": "green_front",
+            "y": -12.841880818794067
+          },
+          {
+            "x": 3.3798354434792452,
+            "name": "green_center",
+            "y": 2.6831587852854444
+          },
+          {
+            "x": 0.1797074356393651,
+            "name": "green_back",
+            "y": 13.772472788424508
+          }
+        ],
+        "depth": 29,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.360632%2C-97.666592&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94121.41199688685,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.14002770936,
+        "lat": 32.360631804104884,
+        "imageScale": 2.5587215354706188
+      },
+      "test": "test",
+      "distance": 181,
+      "maskScale": 2.2364048093835835,
+      "handicap": 15,
+      "rotation": -0.028366439626169804,
+      "lon": -97.66678528186746,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": 17.250677147470014,
+          "name": "tee",
+          "y": -76.84538013198755
+        },
+        {
+          "x": 19.133097637772266,
+          "name": "dogleg",
+          "y": 2.4432196962569606
+        },
+        {
+          "x": 23.180301693995148,
+          "name": "green_front",
+          "y": 60.21854908152818
+        },
+        {
+          "x": 21.580244276636392,
+          "name": "green_center",
+          "y": 75.74358960754773
+        },
+        {
+          "x": 18.380129441918882,
+          "name": "green_back",
+          "y": 86.83290426921519
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.360756,
+          "centerlon": -97.666556,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.360516,
+          "backlon": -97.66659,
+          "centerlat": 32.360656,
+          "type": "green",
+          "frontlon": -97.666539
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.359973%2C-97.666785&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=18",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.3599729678026,
+      "imageScale": 1.1332758433027823
+    },
+    {
+      "par": 4,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.359663%2C-97.664730&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.358082%2C-97.665039&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 14.583154778521351,
+        "rotation": -2.801345821340238,
+        "lon": -97.66503853524739,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": -7.008925405139557,
+            "name": "green_front",
+            "y": 9.935434660242194
+          },
+          {
+            "x": -1.3614813521008915,
+            "name": "green_center",
+            "y": -0.8211955446476988
+          },
+          {
+            "x": 0.8033722012741209,
+            "name": "green_back",
+            "y": -12.13229122338285
+          }
+        ],
+        "depth": -1,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.358082%2C-97.665039&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94124.06754306123,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.09489144098,
+        "lat": 32.35808240529016,
+        "imageScale": 2.9560092865691794
+      },
+      "test": "test",
+      "distance": 396,
+      "maskScale": 0.9600950977355303,
+      "handicap": 3,
+      "rotation": -3.2099382367345775,
+      "lon": -97.66473010675948,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": -6.107818284309985,
+          "name": "tee",
+          "y": 178.62280165495577
+        },
+        {
+          "x": -52.13299929045613,
+          "name": "dogleg",
+          "y": -29.52363453767464
+        },
+        {
+          "x": -36.03830409255406,
+          "name": "green_front",
+          "y": -165.36773913837544
+        },
+        {
+          "x": -30.391042618972364,
+          "name": "green_center",
+          "y": -176.12437436025607
+        },
+        {
+          "x": -28.226259054389203,
+          "name": "green_back",
+          "y": -187.43547531458967
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.357973,
+          "centerlon": -97.665053,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.358172,
+          "backlon": -97.66503,
+          "centerlat": 32.358075,
+          "type": "green",
+          "frontlon": -97.665113
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.359663%2C-97.664730&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.359663234978804,
+      "imageScale": 0.9730403982390767
+    },
+    {
+      "par": 5,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.352360%2C-97.665453&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.351387%2C-97.667779&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 10.923618148950855,
+        "rotation": -4.420863612014577,
+        "lon": -97.66777859985214,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": 13.987846983788751,
+            "name": "green_front",
+            "y": 7.753605801428774
+          },
+          {
+            "x": -2.014416497424831,
+            "name": "green_center",
+            "y": 3.9832445586864758
+          },
+          {
+            "x": -15.945798822088692,
+            "name": "green_back",
+            "y": -1.2287253929634048
+          }
+        ],
+        "depth": 34,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.351387%2C-97.667779&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94130.96165579394,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110892.97770642058,
+        "lat": 32.351387080281356,
+        "imageScale": 2.214383215382811
+      },
+      "test": "test",
+      "distance": 530,
+      "maskScale": 0.722655451914436,
+      "handicap": 11,
+      "rotation": -4.0180181272726525,
+      "lon": -97.66545328996193,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": 142.15003858692396,
+          "name": "tee",
+          "y": 198.41749195370926
+        },
+        {
+          "x": -0.725676682253237,
+          "name": "dogleg",
+          "y": 5.574309993644292
+        },
+        {
+          "x": -138.2364935534673,
+          "name": "catleg",
+          "y": -76.26483220656317
+        },
+        {
+          "x": -204.87417893664838,
+          "name": "green_front",
+          "y": -100.10685872804544
+        },
+        {
+          "x": -220.87475311023599,
+          "name": "green_center",
+          "y": -103.87722571361127
+        },
+        {
+          "x": -234.8046647435549,
+          "name": "green_back",
+          "y": -109.08920360387015
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.351376,
+          "centerlon": -97.6678,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.351457,
+          "backlon": -97.667948,
+          "centerlat": 32.351423,
+          "type": "green",
+          "frontlon": -97.66763
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.352360%2C-97.665453&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.352359732601485,
+      "imageScale": 0.7324550586973279
+    },
+    {
+      "par": 4,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.353456%2C-97.670219&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.355193%2C-97.669846&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 14.487528029566837,
+        "rotation": 0.30007474516152466,
+        "lon": -97.66984562628295,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": 6.647843059951434,
+            "name": "green_front",
+            "y": -10.276291458612977
+          },
+          {
+            "x": 2.506253237817436,
+            "name": "green_center",
+            "y": 1.589264286097265
+          },
+          {
+            "x": -0.3175580039386414,
+            "name": "green_back",
+            "y": 12.234996542959916
+          }
+        ],
+        "depth": -1,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.355193%2C-97.669846&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94127.04140657958,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.04434323436,
+        "lat": 32.3551926684944,
+        "imageScale": 2.9367189488804826
+      },
+      "test": "test",
+      "distance": 432,
+      "maskScale": 0.871456238934841,
+      "handicap": 5,
+      "rotation": -0.051198032391341464,
+      "lon": -97.67021912999103,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": 17.612866479574336,
+          "name": "tee",
+          "y": -197.03169573620752
+        },
+        {
+          "x": 57.61430191488091,
+          "name": "dogleg",
+          "y": 48.0421582790828
+        },
+        {
+          "x": 41.80196978992228,
+          "name": "green_front",
+          "y": 182.3337588271816
+        },
+        {
+          "x": 37.66064470938488,
+          "name": "green_center",
+          "y": 194.19932551475625
+        },
+        {
+          "x": 34.837013973262856,
+          "name": "green_back",
+          "y": 204.8450675895159
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.355303,
+          "centerlon": -97.669819,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.3551,
+          "backlon": -97.669849,
+          "centerlat": 32.355207,
+          "type": "green",
+          "frontlon": -97.669775
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.353456%2C-97.670219&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.353455770718064,
+      "imageScale": 0.8832672505243058
+    },
+    {
+      "par": 3,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.355031%2C-97.666931&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=320x320&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.354783%2C-97.666178&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 9.849143685547174,
+        "rotation": -2.281881586690368,
+        "lon": -97.66617770824064,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": -16.311521649570402,
+            "name": "green_front",
+            "y": 7.618647593135561
+          },
+          {
+            "x": -0.6863551446648462,
+            "name": "green_center",
+            "y": -2.3617256823522297
+          },
+          {
+            "x": 9.950053379194754,
+            "name": "green_back",
+            "y": -15.003531831671138
+          }
+        ],
+        "depth": 34,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.354783%2C-97.666178&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94127.50906160445,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.03639412949,
+        "lat": 32.354783297330826,
+        "imageScale": 1.99649734783911
+      },
+      "test": "test",
+      "distance": 160,
+      "maskScale": 2.2645524570036817,
+      "handicap": 13,
+      "rotation": -1.8205444734174057,
+      "lon": -97.6669306033585,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": -75.89887809365496,
+          "name": "tee",
+          "y": 7.413825866156628
+        },
+        {
+          "x": 31.116726822090584,
+          "name": "dogleg",
+          "y": -18.53517044116859
+        },
+        {
+          "x": 54.55286193524756,
+          "name": "green_front",
+          "y": -19.865888200316533
+        },
+        {
+          "x": 70.17695201157727,
+          "name": "green_center",
+          "y": -29.846271395502242
+        },
+        {
+          "x": 80.81262778586421,
+          "name": "green_back",
+          "y": -42.488090109771804
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.354648,
+          "centerlon": -97.666185,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.354852,
+          "backlon": -97.666072,
+          "centerlat": 32.354762,
+          "type": "green",
+          "frontlon": -97.666351
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.355031%2C-97.666931&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=18",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.355031144417914,
+      "imageScale": 1.1476033147069664
+    },
+    {
+      "par": 4,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.356990%2C-97.666530&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.357614%2C-97.668471&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 12.374351729465983,
+        "rotation": 0.8184887599251112,
+        "lon": -97.66847116070797,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": 12.721936159818107,
+            "name": "green_front",
+            "y": -6.593806742837383
+          },
+          {
+            "x": 1.6152433243977686,
+            "name": "green_center",
+            "y": 2.9429987632882124
+          },
+          {
+            "x": -7.420710168712201,
+            "name": "green_back",
+            "y": 12.258018094632856
+          }
+        ],
+        "depth": -1,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.357614%2C-97.668471&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94124.51555400556,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.08727648243,
+        "lat": 32.35761446093579,
+        "imageScale": 2.508296327329266
+      },
+      "test": "test",
+      "distance": 412,
+      "maskScale": 0.9003085231571285,
+      "handicap": 1,
+      "rotation": 1.4267065777747923,
+      "lon": -97.6665297533984,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": 194.14846325435235,
+          "name": "tee",
+          "y": 17.699318748579117
+        },
+        {
+          "x": -34.94211050490651,
+          "name": "dogleg",
+          "y": 50.85636958646103
+        },
+        {
+          "x": -170.00578073725637,
+          "name": "green_front",
+          "y": 62.61104312691464
+        },
+        {
+          "x": -181.11206163445326,
+          "name": "green_center",
+          "y": 72.14785373598033
+        },
+        {
+          "x": -190.14767999138138,
+          "name": "green_back",
+          "y": 81.46287805159204
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.357725,
+          "centerlon": -97.668454,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.357555,
+          "backlon": -97.66855,
+          "centerlat": 32.357641,
+          "type": "green",
+          "frontlon": -97.668336
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.356990%2C-97.666530&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.356990393033385,
+      "imageScale": 0.9124706962709118
+    },
+    {
+      "par": 5,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.359446%2C-97.671645&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.360887%2C-97.673348&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 13.162834947232419,
+        "rotation": 0.20465016371829936,
+        "lon": -97.6733479355081,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": 6.205925534528231,
+            "name": "green_front",
+            "y": -11.956179823466629
+          },
+          {
+            "x": 2.158716288702312,
+            "name": "green_center",
+            "y": -0.09061335538144988
+          },
+          {
+            "x": 0.9351414009892611,
+            "name": "green_back",
+            "y": 13.438350280869146
+          }
+        ],
+        "depth": -1,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.360887%2C-97.673348&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94121.1452405536,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.14456169172,
+        "lat": 32.36088681712315,
+        "imageScale": 2.6680268493214228
+      },
+      "test": "test",
+      "distance": 482,
+      "maskScale": 0.7755562387554047,
+      "handicap": 17,
+      "rotation": 0.9830524377366618,
+      "lon": -97.67164534161839,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": 208.22785978201796,
+          "name": "tee",
+          "y": -84.41430264017367
+        },
+        {
+          "x": 23.280046537265548,
+          "name": "dogleg",
+          "y": 58.85964278374979
+        },
+        {
+          "x": -82.13550096112124,
+          "name": "catleg",
+          "y": 118.29836936795596
+        },
+        {
+          "x": -154.04396371928863,
+          "name": "green_front",
+          "y": 147.79594636739307
+        },
+        {
+          "x": -158.0911677755115,
+          "name": "green_center",
+          "y": 159.6615130549676
+        },
+        {
+          "x": -159.31474109427484,
+          "name": "green_back",
+          "y": 173.1904769414773
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.361008,
+          "centerlon": -97.673325,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.360779,
+          "backlon": -97.673338,
+          "centerlat": 32.360886,
+          "type": "green",
+          "frontlon": -97.673282
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.359446%2C-97.671645&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.3594462219981,
+      "imageScale": 0.786012371929896
+    },
+    {
+      "par": 4,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.363564%2C-97.670569&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.362468%2C-97.668960&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 15.084267386540526,
+        "rotation": -1.931344827514729,
+        "lon": -97.66895957247259,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": -11.711061901680086,
+            "name": "green_front",
+            "y": 1.0146303224672666
+          },
+          {
+            "x": -0.7931950220723287,
+            "name": "green_center",
+            "y": -2.8666306905394006
+          },
+          {
+            "x": 9.465835064690587,
+            "name": "green_back",
+            "y": -6.969678047394088
+          }
+        ],
+        "depth": -1,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.362468%2C-97.668960&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94119.54207260637,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.17181001682,
+        "lat": 32.36246785038054,
+        "imageScale": 3.057437228123147
+      },
+      "test": "test",
+      "distance": 407,
+      "maskScale": 0.9062489091139745,
+      "handicap": 12,
+      "rotation": -1.9917108168261324,
+      "lon": -97.67056855512898,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": -193.17821409790906,
+          "name": "tee",
+          "y": 29.455723612575184
+        },
+        {
+          "x": 49.465787197410805,
+          "name": "dogleg",
+          "y": -75.67097937666153
+        },
+        {
+          "x": 139.7278497437153,
+          "name": "green_front",
+          "y": -120.58270375499706
+        },
+        {
+          "x": 150.64588859094567,
+          "name": "green_center",
+          "y": -124.46396388610788
+        },
+        {
+          "x": 160.9050802679747,
+          "name": "green_back",
+          "y": -128.5670103106729
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.362405,
+          "centerlon": -97.668968,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.362477,
+          "backlon": -97.668859,
+          "centerlat": 32.362442,
+          "type": "green",
+          "frontlon": -97.669084
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.363564%2C-97.670569&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.36356437742086,
+      "imageScale": 0.9184330212620057
+    },
+    {
+      "par": 5,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.363121%2C-97.665881&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.363431%2C-97.663533&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 14.356876610883491,
+        "rotation": -0.6705561129332046,
+        "lon": -97.66353333119906,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": -4.768873370778573,
+            "name": "green_front",
+            "y": -11.392655645765629
+          },
+          {
+            "x": 2.760609517568639,
+            "name": "green_center",
+            "y": -1.8558414001423262
+          },
+          {
+            "x": 10.007736798305022,
+            "name": "green_back",
+            "y": 7.237400090182103
+          }
+        ],
+        "depth": -1,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.363431%2C-97.663533&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94118.53610790327,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.18890771092,
+        "lat": 32.36343073539573,
+        "imageScale": 2.9099707986809076
+      },
+      "test": "test",
+      "distance": 511,
+      "maskScale": 0.7558161971761346,
+      "handicap": 18,
+      "rotation": -1.3846064345011655,
+      "lon": -97.66588060105764,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": -220.18662529213776,
+          "name": "tee",
+          "y": -51.10084480207411
+        },
+        {
+          "x": 82.97719479120914,
+          "name": "dogleg",
+          "y": -48.993875016231186
+        },
+        {
+          "x": 216.1584445319193,
+          "name": "green_front",
+          "y": 22.975777135911585
+        },
+        {
+          "x": 223.68812649580315,
+          "name": "green_center",
+          "y": 32.512587744189204
+        },
+        {
+          "x": 230.9354453867436,
+          "name": "green_back",
+          "y": 41.605825766346925
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.363496,
+          "centerlon": -97.663504,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.363328,
+          "backlon": -97.663427,
+          "centerlat": 32.363414,
+          "type": "green",
+          "frontlon": -97.663584
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.363121%2C-97.665881&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.36312081156828,
+      "imageScale": 0.765978647379092
+    },
+    {
+      "par": 4,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.363733%2C-97.665682&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.364021%2C-97.667478&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 11.359135476134881,
+        "rotation": -4.567985758845451,
+        "lon": -97.66747777470242,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": 14.378830125855867,
+            "name": "green_front",
+            "y": 5.544411154216472
+          },
+          {
+            "x": -1.1506190120133244,
+            "name": "green_center",
+            "y": 4.102799551727357
+          },
+          {
+            "x": -15.362417920618764,
+            "name": "green_back",
+            "y": 1.219576347537072
+          }
+        ],
+        "depth": -1,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.364021%2C-97.667478&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94117.87356539341,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.20016839354,
+        "lat": 32.364021002244094,
+        "imageScale": 2.3023474829275075
+      },
+      "test": "test",
+      "distance": 383,
+      "maskScale": 1.0185336321927165,
+      "handicap": 8,
+      "rotation": -4.649154405154227,
+      "lon": -97.66568166649067,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": 164.30391862721342,
+          "name": "tee",
+          "y": 57.166240990931556
+        },
+        {
+          "x": -1.7255686821773395,
+          "name": "dogleg",
+          "y": 1.7196676841692806
+        },
+        {
+          "x": -154.67223357975456,
+          "name": "green_front",
+          "y": 37.427260894014125
+        },
+        {
+          "x": -170.20220263043228,
+          "name": "green_center",
+          "y": 35.98564998774509
+        },
+        {
+          "x": -184.41447733803216,
+          "name": "green_back",
+          "y": 33.1024281759951
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.364032,
+          "centerlon": -97.66749,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.364071,
+          "backlon": -97.667641,
+          "centerlat": 32.364058,
+          "type": "green",
+          "frontlon": -97.667325
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.363733%2C-97.665682&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.36373349257022,
+      "imageScale": 1.0322157454744663
+    },
+    {
+      "par": 3,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.364284%2C-97.670173&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=320x320&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.364572%2C-97.671238&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 9.1992332920352,
+        "rotation": 0.8414713457640364,
+        "lon": -97.67123794309668,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": 17.312227158614334,
+            "name": "green_front",
+            "y": -8.47405451334922
+          },
+          {
+            "x": 1.8769903651854847,
+            "name": "green_center",
+            "y": 1.0627615426727566
+          },
+          {
+            "x": -10.358258312548816,
+            "name": "green_back",
+            "y": 16.255131307288533
+          }
+        ],
+        "depth": 34,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.364572%2C-97.671238&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94117.29752202406,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.20995885828,
+        "lat": 32.36457241635152,
+        "imageScale": 1.8645522281128704
+      },
+      "test": "test",
+      "distance": 220,
+      "maskScale": 1.664253389695931,
+      "handicap": 4,
+      "rotation": 1.4007705805052129,
+      "lon": -97.67017265434556,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": 103.78295673069317,
+          "name": "tee",
+          "y": -1.645760117241025
+        },
+        {
+          "x": -31.092471451690244,
+          "name": "dogleg",
+          "y": 22.63983899114919
+        },
+        {
+          "x": -82.95315598004697,
+          "name": "green_front",
+          "y": 23.526984164177065
+        },
+        {
+          "x": -98.38900400641023,
+          "name": "green_center",
+          "y": 33.06379477245491
+        },
+        {
+          "x": -110.62473719805587,
+          "name": "green_back",
+          "y": 48.25615585868741
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.364719,
+          "centerlon": -97.671218,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.364496,
+          "backlon": -97.671348,
+          "centerlat": 32.364582,
+          "type": "green",
+          "frontlon": -97.671054
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.364284%2C-97.670173&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=18",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.364283840954265,
+      "imageScale": 0.8433022389618499
+    },
+    {
+      "par": 4,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.367742%2C-97.669851&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.369382%2C-97.669507&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 9.74372500872691,
+        "rotation": -0.40007302722742866,
+        "lon": -97.66950709897982,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": -2.625831068695037,
+            "name": "green_front",
+            "y": -17.909932127042715
+          },
+          {
+            "x": 4.809045974582577,
+            "name": "green_center",
+            "y": -1.2759380647382237
+          },
+          {
+            "x": 11.020462237655545,
+            "name": "green_back",
+            "y": 14.360016353229163
+          }
+        ],
+        "depth": 34,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.369382%2C-97.669507&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94112.36763702573,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.29374501534,
+        "lat": 32.36938150599844,
+        "imageScale": 1.97480892110817
+      },
+      "test": "test",
+      "distance": 401,
+      "maskScale": 0.9383343716765754,
+      "handicap": 10,
+      "rotation": -0.04166270696891683,
+      "lon": -97.66985118795942,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": 22.04201067893075,
+          "name": "tee",
+          "y": -182.98857921153763
+        },
+        {
+          "x": 52.63134365871372,
+          "name": "dogleg",
+          "y": 34.36198814958357
+        },
+        {
+          "x": 29.759934692781144,
+          "name": "green_front",
+          "y": 163.88518339354368
+        },
+        {
+          "x": 37.19549563235057,
+          "name": "green_center",
+          "y": 180.519155386045
+        },
+        {
+          "x": 43.40748325181903,
+          "name": "green_back",
+          "y": 196.1550890583976
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.369511,
+          "centerlon": -97.669456,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.36922,
+          "backlon": -97.66939,
+          "centerlat": 32.36937,
+          "type": "green",
+          "frontlon": -97.669535
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.367742%2C-97.669851&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.367742134249056,
+      "imageScale": 0.9509015255849622
+    },
+    {
+      "par": 4,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.367785%2C-97.666709&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.366034%2C-97.667104&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 11.011165293496694,
+        "rotation": -3.2480403109121623,
+        "lon": -97.6671044446415,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": -2.6875108500733953,
+            "name": "green_front",
+            "y": 15.877311725090365
+          },
+          {
+            "x": -4.193363895551743,
+            "name": "green_center",
+            "y": -1.311139722881844
+          },
+          {
+            "x": -5.9815643892306625,
+            "name": "green_back",
+            "y": -14.951007646390998
+          }
+        ],
+        "depth": -1,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.366034%2C-97.667104&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94115.815412833,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.23514859335,
+        "lat": 32.3660338234419,
+        "imageScale": 2.231769460153444
+      },
+      "test": "test",
+      "distance": 428,
+      "maskScale": 0.8844014121585622,
+      "handicap": 2,
+      "rotation": -3.088412574090915,
+      "lon": -97.6667088132424,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": -61.949211972434625,
+          "name": "tee",
+          "y": 189.98081510212205
+        },
+        {
+          "x": -14.418094573244218,
+          "name": "dogleg",
+          "y": -19.82901828944341
+        },
+        {
+          "x": -39.92489222800742,
+          "name": "green_front",
+          "y": -178.29532479959926
+        },
+        {
+          "x": -41.43082861971419,
+          "name": "green_center",
+          "y": -195.48376252455387
+        },
+        {
+          "x": -43.21912808703945,
+          "name": "green_back",
+          "y": -209.12361955818437
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.365899,
+          "centerlon": -97.667149,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.366177,
+          "backlon": -97.667168,
+          "centerlat": 32.366022,
+          "type": "green",
+          "frontlon": -97.667133
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.367785%2C-97.666709&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.367784811936495,
+      "imageScale": 0.8962459520202879
+    },
+    {
+      "par": 5,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.368037%2C-97.670674&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.369903%2C-97.670280&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 9.175335377547828,
+        "rotation": 0.27406393842741106,
+        "lon": -97.67027983597345,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": 8.736960643836426,
+            "name": "green_front",
+            "y": -16.86850031939055
+          },
+          {
+            "x": 4.596041406862678,
+            "name": "green_center",
+            "y": 2.981400984770243
+          },
+          {
+            "x": -1.333002045469092,
+            "name": "green_back",
+            "y": 18.950036671837893
+          }
+        ],
+        "depth": 40,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.369903%2C-97.670280&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94111.8008347566,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.30337785745,
+        "lat": 32.369903114688675,
+        "imageScale": 1.8595993308448622
+      },
+      "test": "test",
+      "distance": 492,
+      "maskScale": 0.8250308128444451,
+      "handicap": 14,
+      "rotation": 0.0630486862526376,
+      "lon": -97.67067443310557,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": 67.80790201805996,
+          "name": "tee",
+          "y": -203.02514443291966
+        },
+        {
+          "x": -30.642689663667397,
+          "name": "dogleg",
+          "y": 24.749378710295332
+        },
+        {
+          "x": 48.32484993681146,
+          "name": "catleg",
+          "y": 157.93204779270013
+        },
+        {
+          "x": 45.87770329794728,
+          "name": "green_front",
+          "y": 190.09106031043325
+        },
+        {
+          "x": 41.73637821740988,
+          "name": "green_center",
+          "y": 209.9409335536834
+        },
+        {
+          "x": 35.806753670884746,
+          "name": "green_back",
+          "y": 225.90954666661082
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.370074,
+          "centerlon": -97.670231,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.369751,
+          "backlon": -97.670294,
+          "centerlat": 32.36993,
+          "type": "green",
+          "frontlon": -97.670187
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.368037%2C-97.670674&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.3680368177794,
+      "imageScale": 0.836077370207776
+    },
+    {
+      "par": 3,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.370252%2C-97.670328&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=320x320&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.370122%2C-97.671068&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 11.799038881317522,
+        "rotation": -4.113887104206487,
+        "lon": -97.67106791103495,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": 9.873340662606614,
+            "name": "green_front",
+            "y": 11.199060636872327
+          },
+          {
+            "x": -2.83171929647634,
+            "name": "green_center",
+            "y": 2.9929558775030767
+          },
+          {
+            "x": -14.03099437131179,
+            "name": "green_back",
+            "y": -5.102255573806678
+          }
+        ],
+        "depth": 31,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.370122%2C-97.671068&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94111.55525231415,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.3075515294,
+        "lat": 32.3701220104914,
+        "imageScale": 2.391348803550553
+      },
+      "test": "test",
+      "distance": 152,
+      "maskScale": 2.3959567225126674,
+      "handicap": 16,
+      "rotation": -4.316912264134496,
+      "lon": -97.67032845926657,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": 59.057109033729375,
+          "name": "tee",
+          "y": 43.462539435238796
+        },
+        {
+          "x": -18.87509929527755,
+          "name": "dogleg",
+          "y": 9.085663985329575
+        },
+        {
+          "x": -59.72362395075197,
+          "name": "green_front",
+          "y": -3.22347528836508
+        },
+        {
+          "x": -72.4299622653075,
+          "name": "green_center",
+          "y": -11.429568138282775
+        },
+        {
+          "x": -83.63036418681884,
+          "name": "green_back",
+          "y": -19.52476784107921
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.370076,
+          "centerlon": -97.671098,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.370223,
+          "backlon": -97.671217,
+          "centerlat": 32.370149,
+          "type": "green",
+          "frontlon": -97.670963
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.370252%2C-97.670328&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=18",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.37025206830032,
+      "imageScale": 1.213987139607927
+    },
+    {
+      "par": 4,
+      "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.368352%2C-97.672613&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=1&size=640x640&zoom=17",
+      "green": {
+        "image": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.366603%2C-97.672499&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&zoom=19",
+        "maskScale": 7.65820817662972,
+        "rotation": -2.9072156682609434,
+        "lon": -97.67249867003942,
+        "blurb": {
+          "allowedit": true
+        },
+        "points": [
+          {
+            "x": -10.38373093117032,
+            "name": "green_front",
+            "y": 20.436285893137146
+          },
+          {
+            "x": -6.054429802710625,
+            "name": "green_center",
+            "y": -1.6314698412678155
+          },
+          {
+            "x": -0.031054319810720266,
+            "name": "green_back",
+            "y": -22.922972861001277
+          }
+        ],
+        "depth": -1,
+        "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.366603%2C-97.672499&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=800x800&zoom=19",
+        "lon2x": 94115.24192805355,
+        "lunit": 1.0936132983377078,
+        "lat2y": 110893.24489536017,
+        "lat": 32.36660271207595,
+        "imageScale": 1.5521745453309692
+      },
+      "test": "test",
+      "distance": 430,
+      "maskScale": 0.8780421287811043,
+      "handicap": 6,
+      "rotation": -3.001944879115924,
+      "lon": -97.67261317842058,
+      "blurb": {
+        "allowedit": true
+      },
+      "points": [
+        {
+          "x": -49.39674476144944,
+          "name": "tee",
+          "y": 189.3707606587086
+        },
+        {
+          "x": -45.16129865659752,
+          "name": "dogleg",
+          "y": -71.44992017526715
+        },
+        {
+          "x": 0.3932772266387019,
+          "name": "green_front",
+          "y": -173.58250820563308
+        },
+        {
+          "x": 4.722844355805023,
+          "name": "green_center",
+          "y": -195.65024438184741
+        },
+        {
+          "x": 10.74658992664456,
+          "name": "green_back",
+          "y": -216.9417285313666
+        }
+      ],
+      "features": [
+        {
+          "descrip": null,
+          "backlat": 32.366396,
+          "centerlon": -97.672563,
+          "icon": "https:\/\/cdn.bluegolf.com\/images\/course\/app-green.svg",
+          "frontlat": 32.366787,
+          "backlon": -97.672499,
+          "centerlat": 32.366588,
+          "type": "green",
+          "frontlon": -97.672609
+        }
+      ],
+      "image2x": "https:\/\/cdn.bluegolf.com\/maps\/api\/staticmap?maptype=satellite&center=32.368352%2C-97.672613&key=AIzaSyDewpzThUP2UE7kQpHLkOiL7gpXFxkwtxs&scale=2&size=640x640&format=jpg&zoom=17",
+      "lon2x": 94121.02455211159,
+      "lunit": 1.0936132983377078,
+      "lat2y": 110893.146612995,
+      "lat": 32.368352313218246,
+      "imageScale": 0.8897959488461131
+    }
+  ]
+}
