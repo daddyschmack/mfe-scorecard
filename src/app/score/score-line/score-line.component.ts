@@ -1,9 +1,11 @@
-import { Component, computed, input, model } from '@angular/core';
+import { AfterViewInit, Component, computed, inject, input, model } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HoleStat, statDisplayMap } from '../../models/hole-stat';
-import { StatTotal, TeeBox } from '../../models/golf-course';
-import { getScoreClass } from '../../utils/score-utils';
+import { StatTotal, TeeBox, User } from '../../models/golf-course';
+import { getScoreClass, checkHandicapHole } from '../../utils/score-utils';
+import { UserProfile } from 'shared-data';
+import { GolfCourseService } from '../../services/golf-course.service';
 
 @Component({
   selector: 'app-score-line',
@@ -12,15 +14,23 @@ import { getScoreClass } from '../../utils/score-utils';
   templateUrl: './score-line.component.html',
   styleUrl: './score-line.component.scss'
 })
-export class ScoreLineComponent {
+export class ScoreLineComponent implements AfterViewInit{
+    private golfCourseService = inject(GolfCourseService);
   // Input Signals
-  playerName = input<string>('Tom');
+  player = input<User>({} as User);
   tees = input.required<TeeBox>();
+
+
+
+  constructor(){
+    console.log(' User is ', this.player);
+  }
 
   // State: 18 holes of detailed stats
   holes = model<Partial<StatTotal>[]>(
-    Array.from({ length: 18 }, () => ({
+    Array.from({ length: 18 }, (_,i) => ({
       totalScore: undefined,
+      holeHandicap: undefined,
       teeShots: undefined,
       fairwayStrokes: undefined,
       totalPutts: undefined,
@@ -30,6 +40,10 @@ export class ScoreLineComponent {
       greenInRegulation: undefined
     }))
   );
+  ngAfterViewInit(){
+    console.log('ngAfterViewInit');
+    console.log(this);
+  }
 
   // --- ViewModel ---
   // This computed signal prepares the rows for the template.
@@ -45,7 +59,7 @@ export class ScoreLineComponent {
       const isTotal = key === 'totalScore';
       return {
         key: key,
-        label: isTotal ? this.playerName() : (statDisplayMap[key]?.title || key),
+        label: isTotal ? this.userInfo() : (statDisplayMap[key]?.title || key),
         isTotalRow: isTotal,
         showCheckbox: ['greenInRegulation', 'driveInFairway'].includes(key)
       };
@@ -53,13 +67,15 @@ export class ScoreLineComponent {
   });
 
   // Helper to calculate total score for a hole based on inputs
-  private calculateTotal(hole: Partial<StatTotal>): number | undefined {
+  private calculateTotal(hole: Partial<StatTotal>): number | undefined{
+    const handicapStrokes = this.getsAPop(hole.holeNumber ?? 0);
     const total = (
       (hole.teeShots || 0) +
       (hole.totalPutts || 0) +
       (hole.totalChips || 0) +
       (hole.fairwayStrokes || 0) +
-      (hole.penaltyStrokes || 0)
+      (hole.penaltyStrokes || 0) -
+      (handicapStrokes|| 0)
     );
     return total === 0 ? undefined : total;
   }
@@ -69,6 +85,7 @@ export class ScoreLineComponent {
     this.holes.update(current => {
       const newHoles = [...current];
       const updatedHole = { ...newHoles[index], [field]: value };
+      updatedHole.holeHandicap = this.getHoleHandicap(index);
 
       // Recalculate total score whenever a stat changes
       if (field !== 'totalScore') {
@@ -90,6 +107,11 @@ export class ScoreLineComponent {
     return getScoreClass(total, par);
   }
 
+   getHoleHandicap(holeNumber: number){
+     const hcap = this.tees().holes[holeNumber].handicap;
+     return hcap;
+  }
+
   // Calculates the row total (e.g. Total Putts across 18 holes)
   getTotalStat(key: string): number {
     return this.holes().reduce((sum, hole) => {
@@ -101,4 +123,13 @@ export class ScoreLineComponent {
       return sum + (Number(val) || 0);
     }, 0);
   }
+  userInfo(){
+    return `${this.player()?.displayName} - ${this.player()?.playerInfo?.handicap}`
+  }
+  getsAPop(holeNumber: number){
+    const userHandicap = this.player()?.playerInfo?.handicap || 0;
+    const holeHandicap =  this.getHoleHandicap(holeNumber)  || 0;
+    return checkHandicapHole(holeHandicap, userHandicap) ? 1 : 0;
+  }
+
 }

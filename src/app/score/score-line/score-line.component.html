@@ -14,8 +14,9 @@
 
           @if (row.isTotalRow) {
             <!-- Calculated Total Score (Read Only) -->
-             <div class="score-display" [class]="getScoreSymbol(row.key, i)">
+             <div class="score-display" [class]="getScoreSymbol(row.key, i)"  [attr.handicap]="getsAPop(i)">
                {{ hole.totalScore || '-' }}
+            <div style="display: none">{{getsAPop(i)}}</div>
              </div>
           } @else if (row.showCheckbox) {
             <!-- Checkboxes -->

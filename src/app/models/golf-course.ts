@@ -76,6 +76,7 @@ export interface HoleData {
 export interface StatTotal {
   playTime?: Date;
   holeNumber?: number;
+  holeHandicap?:number;
   teeUUID?: string,
   teeColor?: string;
   totalScore: number ;

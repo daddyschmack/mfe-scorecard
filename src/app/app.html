@@ -1,15 +1,14 @@
-<div style="padding: 20px; border: 2px dashed red;">
+<div>
   <h2>MFE Scorecard (Remote)</h2>
 
   @if (user()) {
     <div style="background: #e0f7fa; padding: 10px; border-radius: 4px;">
-      <h3>✅ Shared State Works!</h3>
       <p><strong>User:</strong> {{ user()?.displayName }}</p>
       <p><strong>Email:</strong> {{ user()?.email }}</p>
       <p><strong>UID:</strong> {{ user()?.uid }}</p>
     </div>
   } @else {
-    <div style="background: #ffebee; padding: 10px; border-radius: 4px;">
+    <div style="background: #ffebee; padding: 2px; border-radius: 4px;">
       <h3>❌ No User Found</h3>
       <p>Please log in via the Shell.</p>
     </div>

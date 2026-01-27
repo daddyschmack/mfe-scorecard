@@ -28,4 +28,10 @@ export class ScoreService {
   getScores(numberOfScores?: number): AngularFirestoreCollection<Partial<GolfRound>>{
     return this.scoreCollectionRef;
   }
+
+   checkHandicapHole(holeHandicap: number, golferHandicap: number): string{
+    // we will compare the user's handicap and determine if they get a stroke(s) on the hole
+     return  golferHandicap < holeHandicap  ? 'disabled' : '';
+    }
+
 }

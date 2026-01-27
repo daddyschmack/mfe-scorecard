@@ -34,3 +34,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin: 0 0 2rem 0;
   }
 }
+.score-line{
+  border: 1px solid #000;
+  display: grid;
+  grid-template-areas: "line-title line-content";
+  &.active{
+    background-color: yellow;
+    font-weight: bold;
+  }
+  & .hole-info{
+    background-color: #a13014;
+    color: #fff;
+  }
+  &:hover{
+    border:2px solid purple;
+  }
+}
