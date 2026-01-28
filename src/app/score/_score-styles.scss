@@ -113,3 +113,46 @@ input[type=number] {
 .birdie, .eagle { background: #fff; color: #000; }
 .bogie, .ouch { background: #fff; color: #000; border-width: 3px; border-radius: 4px; }
 .eagle, .ouch { border-style: double; }
+
+.total-cell{
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  .grossScore{
+    color: black;
+    padding-right:.2rem
+  }
+  .netScore{
+    color: green;
+  }
+}
+
+/* Add dots for handicap strokes */
+.score-display, .score {
+  position: relative; /* Anchor for absolute positioning */
+
+  /* 1 Stroke */
+  &[handicap="1"]::after {
+    content: '•';
+    position: absolute;
+    top: -8px; /* Adjust based on your cell height */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1;
+  }
+
+  /* 2 Strokes */
+  &[handicap="2"]::after {
+    content: '••';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1;
+    letter-spacing: -2px; /* Pull dots closer */
+  }
+}

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HoleStat, statDisplayMap } from '../../models/hole-stat';
 import { StatTotal, TeeBox, User } from '../../models/golf-course';
-import { getScoreClass, checkHandicapHole } from '../../utils/score-utils';
+import { getScoreClass, checkHandicapHole, getHoleHandicap } from '../../utils/score-utils';
 import { UserProfile } from 'shared-data';
 import { GolfCourseService } from '../../services/golf-course.service';
 
@@ -107,10 +107,13 @@ export class ScoreLineComponent implements AfterViewInit{
     return getScoreClass(total, par);
   }
 
-   getHoleHandicap(holeNumber: number){
+
+
+    getHoleHandicap(holeNumber: number){
      const hcap = this.tees().holes[holeNumber].handicap;
      return hcap;
   }
+
 
   // Calculates the row total (e.g. Total Putts across 18 holes)
   getTotalStat(key: string): number {
@@ -126,9 +129,10 @@ export class ScoreLineComponent implements AfterViewInit{
   userInfo(){
     return `${this.player()?.displayName} - ${this.player()?.playerInfo?.handicap}`
   }
-  getsAPop(holeNumber: number){
+  getsAPop(holeNumber: number): number{
+    const holes = this.tees().holes;
     const userHandicap = this.player()?.playerInfo?.handicap || 0;
-    const holeHandicap =  this.getHoleHandicap(holeNumber)  || 0;
+    const holeHandicap =  getHoleHandicap(holes, holeNumber)  || 0;
     return checkHandicapHole(holeHandicap, userHandicap) ? 1 : 0;
   }
 

@@ -80,6 +80,7 @@ export interface StatTotal {
   teeUUID?: string,
   teeColor?: string;
   totalScore: number ;
+  netScore?: number;
   teeShots?: number;
   fairwayStrokes?: number;
   totalPutts?: number;
