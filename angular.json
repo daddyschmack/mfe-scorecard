@@ -48,7 +48,7 @@
 				"esbuild": {
 					"builder": "@angular/build:application",
 					"options": {
-            "preserveSymlinks": true,
+            "preserveSymlinks": false,
 						"browser": "src/main.ts",
 						"tsConfig": "tsconfig.app.json",
 						"inlineStyleLanguage": "scss",

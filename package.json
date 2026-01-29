@@ -36,7 +36,7 @@
     "es-module-shims": "^1.5.12",
     "firebase": "^12.7.0",
     "rxjs": "~7.8.0",
-    "shared-data": "file:../golf-shell/projects/shared-data",
+    "shared-data": "file:../golf-shell/dist/shared-data",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
