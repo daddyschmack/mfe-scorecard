@@ -25,6 +25,7 @@
   "dependencies": {
     "@angular-architects/native-federation": "^21.0.4",
     "@angular/animations": "^21.0.0",
+    "@angular/cdk": "^21.1.2",
     "@angular/common": "^21.0.0",
     "@angular/compiler": "^21.0.0",
     "@angular/core": "^21.0.0",
