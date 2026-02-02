@@ -1,0 +1,137 @@
+<div class="scorecard-wrapper">
+   <!-- Header Section -->
+   <header class="round-header">
+     <div class="course-info">
+          <select #courseSelect (change)="selectedCourseId.set(courseSelect.value)">
+          <option value="golf-course-nutcracker" selected>Nutcracker</option>
+          <option value="golf-course-sugarbush"> SugareBush</option>
+        </select>
+       <h1>{{ courseName() }}</h1>
+       <span class="date">{{ playDate() | date:'mediumDate' }}</span>
+     </div>
+      <div class="tee=selector">
+        @if (golfCourseData().course) {
+          @for (tee of golfCourseData().course.tees; track $index; let i = $index) {
+            <div class="tee-box" (click)="isSelectedTee(tee)">
+              {{i}} --- {{tee.color}}
+            </div>
+          }
+        }
+
+      </div>
+     <div class="handicap-indicator"> <!-- this will updated automatically when the tee color chagnes -->
+
+     </div>
+     <div class="actions">
+       <button (click)="showTeamManager.set(!showTeamManager())">
+         {{showTeamManager() ? 'Hide' : 'Manage' }} Teams
+       </button>
+       <button (click)="toggleMode()">
+         Switch to {{ isDetailedMode() ? 'Simple' : 'Detailed' }} Mode
+       </button>
+       <button (click)="addingPlayer = !addingPlayer">+ Add Player</button>
+     </div>
+     {{addingPlayer}}
+     @if(addingPlayer){
+     <div>
+       <select (change)="addPlayer($event)" multiple>
+       <!--  @for (player of golfCourseData().course.players; track $index; let i = $index) {
+           <option value="{{ i }}">{{ player.name }}</option>
+         } -->
+
+         @for( player of playerList; track $index; let i = $index){
+           <option value="{{player.name}}">{{player.name}}</option>
+         }
+       </select>
+     </div>
+     }
+   </header>
+
+  @if(showTeamManager()){
+    <div class="team-manager-container">
+      <app-team-manager [availablePlayers]="playerList" [(teams)]="generatedTeams"></app-team-manager>
+    </div>
+  }
+
+   @if (isLoading()) {
+     <div class="loading-container">
+       <div class="spinner"></div>
+       <p>Loading Course Data...</p>
+     </div>
+   } @else {
+   <!-- SCORECARD HEADER GRID -->
+
+     <hr>
+     <pre>{{generatedTeams() | json}}</pre>
+     <hr>
+   <div class="score-grid-header">
+
+     <!-- Row 1: Hole Numbers -->
+     <div class="score-line header-row">
+       <div class="stat-name">Hole</div>
+       <div class="hole-names">
+         @for (hole of currentTees().holeinfo; track $index; let i = $index) {
+           <div class="hole-info">{{ i + 1 }}</div>
+         }
+         <div class="hole-info">Tot</div>
+       </div>
+     </div>
+
+     <!-- Row 2: Tee Selector (All Available Tees) -->
+     @if (golfCourseData().course) {
+     @for (tee of golfCourseData().course.tees; track tee.uuid) {
+       <div class="score-line" [class]="isSelectedTee(tee)">
+         <!-- Clickable Header to Select Tee -->
+         <div class="stat-name" (click)="selectTeeBox(tee)" style="cursor: pointer; text-decoration: underline;">
+           {{ tee.color | titlecase }}
+         </div>
+         <div class="hole-names">
+           @for (hole of tee.holeinfo; track $index) {
+             <div class="score">{{ hole.distance }}</div>
+           }
+           <!-- Extract total yardage from 'extra' string (e.g. "6769 yds...") -->
+           <div class="score">{{ getTeeTotalDistance(tee) }}</div>
+         </div>
+       </div>
+     }
+     }
+
+     <!-- Row 3: Par -->
+     <div class="score-line">
+       <div class="stat-name">Par</div>
+       <div class="hole-names">
+         @for (hole of currentTees().holeinfo; track $index) {
+           <div class="score">{{ hole.par }}</div>
+         }
+         <div class="score">{{ getTotalPar() }}</div>
+       </div>
+     </div>
+
+     <!-- Row 4: Handicap -->
+     <div class="score-line">
+       <div class="stat-name">Handicap</div>
+       <div class="hole-names">
+         @for (hole of currentTees().holeinfo; track $index) {
+           <div class="score">{{ hole.hcap }}</div>
+         }
+         <div class="score"></div> <!-- No total for handicap -->
+       </div>
+     </div>
+   </div>
+
+   <!-- PLAYERS LOOP -->
+   <div class="players-container">
+     @for (round of rounds(); track round.id) {
+       <div class="player-card">
+         @if (isDetailedMode()) {
+           <app-score-line [player]="round.golfer" [tees]="currentTees()" [(holes)]="round.player_score"></app-score-line>
+         } @else {
+           <app-simple-score-line [player]="round.golfer" [tees]="currentTees()" [(holes)]="round.player_score"></app-simple-score-line>
+         }
+       </div>
+     }
+   </div>
+   }
+ </div>
+{{rounds().length | json}}
+<button (click)="getRoundInfo()">debug</button>

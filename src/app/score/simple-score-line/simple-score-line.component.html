@@ -1,0 +1,32 @@
+<div class="score-container">
+  <!-- The Score Inputs Row -->
+  <div class="score-line">
+    <!-- Cell 1: Player Name -->
+    <div class="stat-name player-name">{{ userInfo() }}</div>
+
+    <!-- Cells 2-19: Scores -->
+    <div class="hole-names">
+      @for (hole of holes(); track $index; let i = $index) {
+        <div class="score" [attr.handicap]="getsAPop(i)">
+          <!--
+            [ngModel]: Binds the input to the data
+            (ngModelChange): Calls our update function when user types
+            [class]: Applies 'birdie', 'bogie', etc.
+          -->
+          <input type="number"
+                 [class]="getScoreSymbol(i)"
+                 [ngModel]="hole.totalScore"
+                 (ngModelChange)="updateScore(i, $event)">
+          @if(getsAPop(i)){
+            <span >/{{hole.netScore}}</span>
+          }
+        </div>
+      }
+      <!-- The 19th Column: Calculated Total -->
+      <div class="score total-cell">
+        <span class="grossScore" >{{ getTotalScore() }}</span>
+        <span class="netScore">{{ getTotalNetScore() }}</span>
+      </div>
+    </div>
+  </div>
+</div>
