@@ -39,8 +39,8 @@ export class SimpleScoreLineComponent {
     return net;
   }
   // 4. Helper: Calculate Round Total
-  getTotalScore(): number {
-    return this.holes().reduce((sum, hole) => {
+  getTotalScore(start: number = 0, end: number = 18): number {
+    return this.holes().slice(start, end).reduce((sum, hole) => {
       return sum + (Number(hole.totalScore) || 0);
     }, 0);
   }

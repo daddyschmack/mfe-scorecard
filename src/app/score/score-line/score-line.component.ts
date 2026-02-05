@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, computed, inject, input, model } from '@angular/core';
+import { AfterViewInit, Component, computed, inject, input, model, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HoleStat, statDisplayMap } from '../../models/hole-stat';

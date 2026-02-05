@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%;
-font-size: 10px;
+html {
+  /* 62.5% of the default 16px is 10px */
+  font-size: 62.5%;
 }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* Login and Register Styles */
@@ -147,8 +148,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 }
 
-.player-name {
-  font-size: 1.5rem;
+.player-name, .team-name {
+  font-size: 1.25rem;
   font-weight: bold;
 }
 

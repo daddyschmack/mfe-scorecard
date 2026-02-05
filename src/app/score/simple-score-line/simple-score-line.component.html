@@ -7,6 +7,9 @@
     <!-- Cells 2-19: Scores -->
     <div class="hole-names">
       @for (hole of holes(); track $index; let i = $index) {
+         @if(i + 1 == 10){
+             <div> show a total hole</div>
+           } @else{
         <div class="score" [attr.handicap]="getsAPop(i)">
           <!--
             [ngModel]: Binds the input to the data
@@ -21,6 +24,7 @@
             <span >/{{hole.netScore}}</span>
           }
         </div>
+         }
       }
       <!-- The 19th Column: Calculated Total -->
       <div class="score total-cell">
