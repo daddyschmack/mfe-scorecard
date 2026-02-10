@@ -7,29 +7,41 @@
     <!-- Cells 2-19: Scores -->
     <div class="hole-names">
       @for (hole of holes(); track $index; let i = $index) {
-         @if(i + 1 == 10){
-             <div> show a total hole</div>
-           } @else{
         <div class="score" [attr.handicap]="getsAPop(i)">
           <!--
             [ngModel]: Binds the input to the data
             (ngModelChange): Calls our update function when user types
             [class]: Applies 'birdie', 'bogie', etc.
           -->
+          @if( scoreType() === "gross"){
           <input type="number"
                  [class]="getScoreSymbol(i)"
                  [ngModel]="hole.totalScore"
                  (ngModelChange)="updateScore(i, $event)">
-          @if(getsAPop(i)){
+          }
+          @if(getsAPop(i) && scoreType() === "net"){
             <span >/{{hole.netScore}}</span>
           }
         </div>
-         }
+
+        <!-- Insert Front 9 Total after index 8 (Hole 9) -->
+        @if(i === 8){
+          <div class="score total-cell">
+             @if(scoreType() === "gross"){
+              <span class="grossScore" >{{ getTotalScore(0,9) }}</span>
+             } @else {
+              <span class="netScore">{{ getTotalNetScore(0,9) }}</span>
+             }
+          </div>
+        }
       }
       <!-- The 19th Column: Calculated Total -->
       <div class="score total-cell">
+        @if(scoreType() === "gross"){
         <span class="grossScore" >{{ getTotalScore() }}</span>
-        <span class="netScore">{{ getTotalNetScore() }}</span>
+        } @else {
+        <span class="netScore"> / {{ getTotalNetScore() }}</span>
+        }
       </div>
     </div>
   </div>

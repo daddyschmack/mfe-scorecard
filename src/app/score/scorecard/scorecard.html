@@ -22,6 +22,8 @@
          Switch to {{ isDetailedMode() ? 'Simple' : 'Detailed' }} Mode
        </button>
        <button (click)="addingPlayer = !addingPlayer">+ Add Player</button>
+       <button (click)="toggleScoreType()">displaying {{scoreType()}} score</button>
+       <button (click)="toggleGameType()">Game: {{gameType() | titlecase}}</button>
      </div>
      {{addingPlayer}}
      @if(addingPlayer){
@@ -111,22 +113,22 @@
          <div class="score"></div> <!-- No total for handicap -->
        </div>
      </div>
-   </div>
-
-   <!-- PLAYERS LOOP -->
+          <!-- PLAYERS LOOP -->
      @if(generatedTeams().length < 1 ){
    <div class="players-container">
      @for (round of rounds(); track round.id) {
        <div class="player-card">
          @if (isDetailedMode()) {
-           <app-score-line [player]="round.golfer" [tees]="currentTees()" [(holes)]="round.player_score"></app-score-line>
+           <app-score-line [player]="round.golfer" [tees]="currentTees()" [(holes)]="round.player_score" [scoreType]="scoreType()"></app-score-line>
          } @else {
-           <app-simple-score-line [player]="round.golfer" [tees]="currentTees()" [(holes)]="round.player_score"></app-simple-score-line>
+           <app-simple-score-line [player]="round.golfer" [tees]="currentTees()" [(holes)]="round.player_score" [scoreType]="scoreType()"></app-simple-score-line>
          }
        </div>
      }
    </div>
      }
+   </div>
+
    }
 
 <!-- let's track the team score -->
@@ -152,6 +154,7 @@
         [tees]="currentTees()"
         [holes]="player.player_score"
         (holesChange)="updateScore(player.id, $event)"
+        [scoreType]="scoreType()"
         ></app-simple-score-line>
     }
     </div>

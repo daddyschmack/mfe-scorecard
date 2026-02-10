@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { BehaviorSubject, filter, map, Observable, tap } from "rxjs";
-import { GolfCourse, StatTotal } from "../models/golf-course";
+import { BehaviorSubject, catchError, filter, map, Observable, of, tap } from "rxjs";
+import { GolfCourse, PlayerInfo, StatTotal } from "../models/golf-course";
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +20,16 @@ export class GolfCourseService {
   public totalCounter = new BehaviorSubject<StatTotal[]>([]);
 
   constructor(private http: HttpClient) { }
+
+  getPlayerList(): Observable<Partial<PlayerInfo>[]> {
+    return this.http.get<Partial<PlayerInfo>[]>('assets/player_data/player-list.json')
+    .pipe(
+      catchError((error) => {
+        console.error('Error loading player data:', error);
+        return of([]);
+      })
+    )
+  }
 
   getGolfCourse(courseName: string): Observable<GolfCourse> {
     let result: any;

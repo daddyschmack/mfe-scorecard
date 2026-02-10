@@ -17,6 +17,8 @@ export class SimpleScoreLineComponent {
   // 1. Inputs
   player = input<User>({} as User);
   tees = input.required<TeeBox>();
+  scoreType = input<'net' | 'gross'>('gross');
+
 
   // 2. The Data Model (Two-way sync with Parent)
   // We use Partial<StatTotal> because fields like 'putts' might be undefined
@@ -25,7 +27,7 @@ export class SimpleScoreLineComponent {
   // 3. Update Logic
   // We only update the 'totalScore' field. We preserve the rest of the object
   // so we don't lose detailed stats if the user switches modes.
-  updateScore(index: number, value: number) {
+  updateScore( index: number, value: number) {
     this.holes.update(current => {
       const newHoles = [...current];
       newHoles[index] = { ...newHoles[index], totalScore: value };
@@ -44,10 +46,13 @@ export class SimpleScoreLineComponent {
       return sum + (Number(hole.totalScore) || 0);
     }, 0);
   }
-  getTotalNetScore(): any {
-   const totalScore =  this.getTotalScore();
-   const netScore= totalScore - (this.player()?.playerInfo?.handicap || 0);
-   return netScore > 0 ? ` / ${netScore}` : '';
+  getTotalNetScore(start: number= 0, end: number = 18): number {
+    return this.holes().slice(start, end).reduce((sum, hole, i) => {
+      const gross = Number(hole.totalScore) || 0;
+      if (gross === 0) return sum;
+      const pop = this.getsAPop(start + i);
+      return sum + (gross - pop);
+    }, 0);
   }
 
 
@@ -68,4 +73,5 @@ export class SimpleScoreLineComponent {
     const holeHandicap =  getHoleHandicap(holes, holeNumber)  || 0;
     return checkHandicapHole(holeHandicap, userHandicap) ? 1 : 0;
   }
+
 }

@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
-import { GolfTeam, GolfRound } from "../models/golf-course";
+import { GolfTeam, GolfRound, PlayerInfo } from "../models/golf-course";
+import { catchError, of, tap } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TeamBalancerService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   // Function to create balanced golf teams based on handicaps
   createBalancedTeams(rounds: GolfRound[], numTeams: number): GolfTeam[] {

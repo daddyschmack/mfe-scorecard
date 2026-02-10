@@ -1,5 +1,6 @@
 import { Component, computed, effect, inject, linkedSignal, signal, SimpleChange, untracked } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { SimpleScoreLineComponent } from '../simple-score-line/simple-score-line.component';
 import { ScoreLineComponent } from '../score-line/score-line.component';
 import { Course, GolfCourse, GolfRound, GolfTeam, HoleData, PlayerInfo, StatTotal, TeamHoleScore, TeeBox } from '../../models/golf-course';
@@ -9,6 +10,7 @@ import { GolfCourseService } from '../../services/golf-course.service';
 import { TeamManager} from '../../team-manager/team-manager';
 import { UserProfile, UserProfileService } from 'shared-data';
 import { checkHandicapHole } from '../../utils/score-utils';
+import { TeamBalancerService } from '../../services/team-balancer.service';
 
 
 @Component({
@@ -23,6 +25,7 @@ export class Scorecard {
 
   private golfCourseService = inject(GolfCourseService);
   public userProfileService = inject(UserProfileService);
+  public teamBalanceerService = inject(TeamBalancerService);
 
   //UI State
   showTeamManager = signal(false); // add toggle state
@@ -31,17 +34,7 @@ export class Scorecard {
   public currentPlayer = computed(() => this.userProfileService.userProfile() ?? {});
 
 
-  readonly playerList: Partial<PlayerInfo>[] = [
-    { name: 'John Jaeckle Sr', handicap: 16 },
-    { name: 'John Jaeckle Jr,', handicap: 13 },
-    { name: 'Larry Swift', handicap: 10 },
-    { name: 'Jim Bryan', handicap: 4 },
-    { name: 'Ralph ', handicap: 11 },
-    { name: 'Carmine', handicap: 8 },
-    { name: 'Jim Dodson', handicap: 13 },
-    { name: 'Paul Bueme', handicap: 8 },
-    { name: 'Frank Andrews', handicap: 8 },
-  ];
+  playerList: Partial<PlayerInfo>[] = [];
 
   // 1. Course Info
   courseName = signal('Loading Course...');
@@ -60,6 +53,8 @@ export class Scorecard {
 
   // 2. Mode Switching
   isDetailedMode = signal(false);
+  scoreType = signal<'net' | 'gross'>('gross');
+
 
   // 3. Tees
   // Initialize with empty holeinfo to be safe until data loads
@@ -80,6 +75,18 @@ export class Scorecard {
 
   constructor() {
     console.log('Scorecard Component Initialized!');
+    this.golfCourseService.getPlayerList()
+      .pipe(
+        catchError((error) => {
+          console.error('Error loading player data:', error);
+          return EMPTY;
+        })
+      )
+      .subscribe(data => {
+        this.playerList = data;
+      });
+    
+
     // this.loadCourseData();
 
     this.golfCourseService.totalCounter.subscribe(data => {
@@ -480,6 +487,11 @@ export class Scorecard {
     console.log('createEmptyRound', scoreArray);
     return scoreArray;
   }
+
+  toggleScoreType(){
+    this.scoreType.update(current => current === 'gross' ? 'net' : 'gross');
+  }
+
   getHoleHandicap(holeNumber: number){
      const hcap = this.currentTees()?.holeinfo?.[holeNumber]?.hcap;
      return hcap;
@@ -499,5 +511,7 @@ export class Scorecard {
 
   getRoundInfo(){
     console.log('this.rounds ', this.rounds());
-    console.log('this.teams ', this.generatedTeams())  }
+    console.log('this.teams ', this.generatedTeams())
+  }
+
 }

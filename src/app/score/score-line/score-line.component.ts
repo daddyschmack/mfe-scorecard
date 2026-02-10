@@ -15,6 +15,9 @@ import { GolfCourseService } from '../../services/golf-course.service';
   styleUrl: './score-line.component.scss'
 })
 export class ScoreLineComponent implements AfterViewInit{
+
+    scoreType = input<'net' | 'gross'>('gross');
+
     private golfCourseService = inject(GolfCourseService);
   // Input Signals
   player = input<User>({} as User);
