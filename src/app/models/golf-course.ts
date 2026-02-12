@@ -1,4 +1,4 @@
-export interface GolfCourse {
+export interface LegacyGolfCourse {
   allowShots: boolean;
   allowgps: boolean;
   course: Course;
@@ -7,6 +7,52 @@ export interface GolfCourse {
   path: string;
   robot: false;
   showLoginPrompt: boolean;
+}
+
+export interface GolfCourse {
+  Facility: Facility;
+  Season: Season;
+  TeeSets: TeeSet[];
+  CourseId: number;
+  CourseName: string;
+  CourseStatus: string;
+  CourseNumber: string | null;
+  CourseCity: string;
+  CourseState: string;
+}
+
+export interface Facility {
+  FacilityId: number;
+  FacilityStatus: string;
+  FacilityName: string;
+  FacilityNumber: string | null;
+  GolfAssociationId: number;
+  GeoLocationFormattedAddress: string;
+  GeoLocationLongitude: number;
+  GeoLocationLatitude: number;
+}
+
+export interface Season {
+  SeasonName: string;
+  SeasonStartDate: string;
+  SeasonEndDate: string;
+  IsAllYear: boolean;
+}
+
+export interface TeeSet {
+  Ratings: Rating[];
+  Holes: CourseHole[];
+  TeeSetRatingId: number;
+  TeeSetRatingName: string;
+  Gender: string;
+  HolesNumber: number;
+  TotalYardage: number;
+  TotalMeters: number;
+  LegacyCRPTeeId: number | null;
+  StrokeAllocation: boolean;
+  TotalPar: number;
+  IsShorter: boolean | null;
+  EligibleSides: string | null;
 }
 
 export interface Course {
@@ -24,6 +70,22 @@ export interface Course {
   tee: TeeBox;
   unit: "Yards" | "Meter";
 }
+
+export interface Rating {
+  RatingType: string;
+  CourseRating: number;
+  SlopeRating: number;
+  BogeyRating: number;
+}
+
+export interface CourseHole {
+  Number: number;
+  HoleId: number;
+  Length: number;
+  Par: number;
+  Allocation: number;
+}
+
 export interface GolfRound{
   golfer: User;
   golfCourse?: Partial<GolfCourse>; // name id

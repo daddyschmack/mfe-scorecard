@@ -32,10 +32,8 @@ export class GolfCourseService {
   }
 
   getGolfCourse(courseName: string): Observable<GolfCourse> {
-    let result: any;
-    result = this.http.get(`assets/golf_course_data/${courseName}.json`);
-   // result = this.http.get('assets/golf-course-nutcracker.json')
-   return result
+    const fileName = courseName.startsWith('ghin-course-') ? courseName : `ghin-course-${courseName}`;
+    return this.http.get<GolfCourse>(`assets/golf_course_data/${fileName}.json`);
   }
   getTotalValue(targetArray: StatTotal[], property: string): number {
     if( targetArray?.length === 0 || !property){

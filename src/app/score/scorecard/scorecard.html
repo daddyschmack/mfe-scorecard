@@ -3,8 +3,11 @@
    <header class="round-header">
      <div class="course-info">
           <select #courseSelect (change)="selectedCourseId.set(courseSelect.value)">
-          <option value="golf-course-nutcracker" selected>Nutcracker</option>
-          <option value="golf-course-sugarbush"> SugareBush</option>
+          <option value="4262" selected>Nutcracker Golf Club</option>
+          <option value="1861">Red Sky - Fazio Course</option>
+          <option value="3991">Squaw Valley - Lakes</option>
+          <option value="4117">Stonebridge Ranch - Dye</option>
+          <option value="4231">Pecan Plantation</option>
         </select>
        <h1>{{ courseName() }}</h1>
        <span class="date">{{ playDate() | date:'mediumDate' }}</span>
@@ -23,7 +26,6 @@
        </button>
        <button (click)="addingPlayer = !addingPlayer">+ Add Player</button>
        <button (click)="toggleScoreType()">displaying {{scoreType()}} score</button>
-       <button (click)="toggleGameType()">Game: {{gameType() | titlecase}}</button>
      </div>
      {{addingPlayer}}
      @if(addingPlayer){
@@ -71,12 +73,12 @@
      </div>
 
      <!-- Row 2: Tee Selector (All Available Tees) -->
-     @if (golfCourseData().course) {
+     @if (golfCourseData()?.TeeSets) {
        <div class="score-line">
          <div class="stat-name">
            <select (change)="onTeeChange($event)">
-             @for (tee of golfCourseData().course.tees; track $index; let i = $index) {
-               <option [value]="i" [selected]="currentTees().color === tee.color">{{tee.color}}</option>
+             @for (tee of golfCourseData()?.TeeSets; track $index; let i = $index) {
+               <option [value]="i" [selected]="currentTees().color === tee.TeeSetRatingName">{{tee.TeeSetRatingName}}</option>
              }
            </select>
          </div>

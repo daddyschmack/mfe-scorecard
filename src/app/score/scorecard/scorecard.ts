@@ -1,9 +1,19 @@
-import { Component, computed, effect, inject, linkedSignal, signal, SimpleChange, untracked } from '@angular/core';
+import {
+  Component,
+  computed,
+  effect,
+  inject,
+  linkedSignal,
+  Signal,
+  signal,
+  SimpleChange,
+  untracked
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { SimpleScoreLineComponent } from '../simple-score-line/simple-score-line.component';
 import { ScoreLineComponent } from '../score-line/score-line.component';
-import { Course, GolfCourse, GolfRound, GolfTeam, HoleData, PlayerInfo, StatTotal, TeamHoleScore, TeeBox } from '../../models/golf-course';
+import { Course, GolfCourse, GolfRound, GolfTeam, HoleData, PlayerInfo, StatTotal, TeamHoleScore, TeeBox, TeeSet } from '../../models/golf-course';
 import { catchError, EMPTY, tap, finalize, Observable, switchMap, take, debounceTime } from 'rxjs';
 import { rxResource, takeUntilDestroyed, toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { GolfCourseService } from '../../services/golf-course.service';
@@ -25,7 +35,7 @@ export class Scorecard {
 
   private golfCourseService = inject(GolfCourseService);
   public userProfileService = inject(UserProfileService);
-  public teamBalanceerService = inject(TeamBalancerService);
+  public teamBalancerService = inject(TeamBalancerService);
 
   //UI State
   showTeamManager = signal(false); // add toggle state
@@ -37,19 +47,23 @@ export class Scorecard {
   playerList: Partial<PlayerInfo>[] = [];
 
   // 1. Course Info
-  courseName = signal('Loading Course...');
+  selectedCourseId = signal('4262');
   playDate = signal(new Date());
-  isLoading = signal(true);
-  selectedCourseId = signal('golf-course-nutcracker');
   addingPlayer = false;
-  // players
 
-  // Holds the full course data
-  // Initialize with a partial object cast to GolfCourse to satisfy TS initially,
-  // or better yet, handle the loading state in the template.
+  // Resource: Automatically fetches course when selectedCourseId changes
+  courseResource = rxResource({
+    request: () => ({ id: this.selectedCourseId() }),
+    loader: ({ request }: { request: { id: string } }): Observable<GolfCourse> => this.golfCourseService.getGolfCourse(request.id)
+  });
 
-  golfCourseData = signal<GolfCourse>({} as GolfCourse);
-  course = signal<Course>({} as Course);
+  // Derived State
+  golfCourseData = computed(() => this.courseResource.value() as GolfCourse | undefined);
+  isLoading = computed(() => this.courseResource.isLoading());
+  courseName = computed(() => {
+    if (this.courseResource.error()) return 'Error Loading Page';
+    return (this.courseResource.value() as GolfCourse | undefined)?.CourseName ?? 'Loading Course...';
+  });
 
   // 2. Mode Switching
   isDetailedMode = signal(false);
@@ -57,8 +71,15 @@ export class Scorecard {
 
 
   // 3. Tees
-  // Initialize with empty holeinfo to be safe until data loads
-  currentTees = signal<TeeBox>({holeinfo: []} as unknown as TeeBox);
+  currentTees = linkedSignal({
+    source: this.golfCourseData,
+    computation: (data, previous) => {
+      // Adapter: Convert the first TeeSet (new format) to TeeBox (old format)
+      const firstTeeSet = data?.TeeSets?.[0];
+      if (!firstTeeSet) return { holeinfo: [] } as unknown as TeeBox;
+      return this.mapTeeSetToTeeBox(firstTeeSet);
+    }
+  });
 
   // 4. Players State (The Master List)
   rounds = signal<GolfRound[]>([]);
@@ -82,10 +103,8 @@ export class Scorecard {
           return EMPTY;
         })
       )
-      .subscribe(data => {
-        this.playerList = data;
-      });
-    
+      .subscribe();
+
 
     // this.loadCourseData();
 
@@ -211,7 +230,7 @@ export class Scorecard {
       .subscribe();
   }
 
-
+/*
   getCourseResourceSignalMethod = toSignal(
     toObservable(this.selectedCourseId)
       .pipe(
@@ -233,22 +252,7 @@ export class Scorecard {
         })
       )
   )
-
-  getCourseResouceSignalMethod_BAd = toSignal(
-    toObservable(this.selectedCourseId)
-      .pipe(
-        tap(() => this.isLoading.set(true)),
-        switchMap( id =>this.golfCourseService.getGolfCourse(id)),
-        tap((data: GolfCourse) => {
-            if (data && data.course && data.course.tees[0]) {
-              this.currentTees.set(data.course.tees[0]);
-              this.golfCourseData.set(data);
-              this.courseName.set(data.course.name);
-            }
-            this.isLoading.set(false);
-          })
-      )
-    );
+*/
   private calculateTeamScores(teams: GolfTeam[], rounds: GolfRound[], tees: TeeBox, bestBallCount: number, gameType: 'match' | 'stroke' = 'match'): GolfTeam[] {
     // 1. Calculate Best Ball Score for EACH team independently
     const calculatedTeams = teams.map( team => {
@@ -348,42 +352,14 @@ export class Scorecard {
     return calculatedTeams;
   }
 
- /* courseRXResource = rxResource({
+  /* courseRXResource = rxResource({
     // 'request' tracks the signal. When selectedCourseId changes, the resource reloads.
     request: () => ({ id: this.selectedCourseId() }),
 
     // 'loader' performs the actual work
     loader: ({ request }) => this.golfCourseService.getGolfCourse(request.id)
-  });
+  }); */
 
-  courseName = computed(() => this.courseRXResource.value()?.course.name ?? 'Loading...');
-  isLoading= computed(() => this.courseRXResource.isLoading());
-
-  loadCourseData(targetGolfCourse: string = 'golf-course-nutcracker'){
-    // The service handles the HTTP call now
-    this.golfCourseService.getGolfCourse(targetGolfCourse)
-      .pipe(
-        take(1),
-        tap((data: GolfCourse) => {
-         if(data && data.course && data.course.tees){
-            const teeList = data.course.tees;
-            // Default to first tee
-            this.currentTees.set(teeList[0]);
-            this.golfCourseData.set(data);
-            this.courseName.set(data.course.name);
-           }
-        }),
-        catchError(err => {
-          console.error('Failed to load course data', err);
-          this.courseName.set('Error loading course');
-          return EMPTY;
-        }),
-        finalize(() => this.isLoading.set(false))
-      )
-      .subscribe();
-  }
-
-  */
 
   selectTeeBox(tee: TeeBox) {
     this.currentTees.set(tee);
@@ -405,9 +381,9 @@ export class Scorecard {
   onTeeChange(event: Event) {
     const select = event.target as HTMLSelectElement;
     const index = parseInt(select.value, 10);
-    const tees = this.golfCourseData().course?.tees;
-    if (tees && tees[index]) {
-      this.selectTeeBox(tees[index]);
+    const teeSet = this.golfCourseData()?.TeeSets?.[index];
+    if (teeSet) {
+      this.selectTeeBox(this.mapTeeSetToTeeBox(teeSet));
     }
   }
 
@@ -497,11 +473,6 @@ export class Scorecard {
      return hcap;
   }
 
-  getGolfCourse(event: Event){
-    const target = event.target as HTMLInputElement;
-    this.golfCourseService.getGolfCourse(target.value);
-  }
-
   isHandicapHole(handicap: number): string{
     // we will compare the user's handicap and determine if they get a stroke(s) on the hole
     const hCap = this.userProfileService.userProfile()?.handicap ?? 0;
@@ -514,4 +485,28 @@ export class Scorecard {
     console.log('this.teams ', this.generatedTeams())
   }
 
+  private mapTeeSetToTeeBox(teeSet: TeeSet): TeeBox {
+    return {
+      color: teeSet.TeeSetRatingName,
+      par: teeSet.TotalPar,
+      rating: teeSet.Ratings?.[0]?.CourseRating?.toString() || '',
+      slope: teeSet.Ratings?.[0]?.SlopeRating || 0,
+      holeinfo: teeSet.Holes?.map((h) => ({
+        par: h.Par,
+        distance: h.Length,
+        hcap: h.Allocation
+      })) || [],
+      // Mocking required fields for TeeBox compatibility
+      holes: [],
+      side: 0,
+      distancethishole: 0,
+      iscustom: false,
+      tourneyuuid: null,
+      type: teeSet.Gender,
+      uuid: '',
+      hasHoleAllocations: true,
+      unit: 'Yards',
+      extra: ''
+    } as TeeBox;
+  }
 }
