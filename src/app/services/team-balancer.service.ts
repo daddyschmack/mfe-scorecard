@@ -85,7 +85,7 @@ export class TeamBalancerService {
         totalHandicap: totalHandicap,
         roster: members,
         score: {
-          numberOfBalls: 2, // Default: Best 2 balls
+          numberOfBalls: members.length - 1, // Default: Best 2 balls
           scoringType: 'net', // Default: Net scoring
           netScore: 0,
           grossScore: 0,

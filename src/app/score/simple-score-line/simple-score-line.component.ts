@@ -74,4 +74,26 @@ export class SimpleScoreLineComponent {
     return checkHandicapHole(holeHandicap, userHandicap) ? 1 : 0;
   }
 
+  validateInput(event: Event, index: number) {
+    const input = event.target as HTMLInputElement;
+    let value = input.value;
+
+    // 1. Remove non-numeric characters
+    value = value.replace(/[^0-9]/g, '');
+
+    // 2. Limit length to 2 digits
+    if (value.length > 2) {
+      value = value.slice(0, 2);
+    }
+
+    // 3. Update input value if it changed
+    if (input.value !== value) {
+      input.value = value;
+    }
+
+    // 4. Trigger model update
+    // We parse it to a number, or 0 if empty
+    this.updateScore(index, value === '' ? 0 : parseInt(value, 10));
+  }
+
 }

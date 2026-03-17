@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { SimpleScoreLineComponent } from '../simple-score-line/simple-score-line.component';
 import { ScoreLineComponent } from '../score-line/score-line.component';
+import { ScoreSummary } from '../score-summary/score-summary';
 import { Course, GolfCourse, GolfRound, GolfTeam, HoleData, PlayerInfo, StatTotal, TeamHoleScore, TeeBox } from '../../models/golf-course';
 import { catchError, EMPTY, tap, finalize, Observable, switchMap, take, debounceTime } from 'rxjs';
 import { rxResource, takeUntilDestroyed, toObservable, toSignal } from '@angular/core/rxjs-interop';
@@ -16,7 +17,7 @@ import { TeamBalancerService } from '../../services/team-balancer.service';
 @Component({
   selector: 'app-scorecard',
   standalone: true,
-  imports: [CommonModule, SimpleScoreLineComponent, ScoreLineComponent, TeamManager],
+  imports: [CommonModule, SimpleScoreLineComponent, ScoreLineComponent, TeamManager, ScoreSummary],
   templateUrl: './scorecard.html',
   styleUrl: './scorecard.scss',
 })
@@ -85,7 +86,7 @@ export class Scorecard {
       .subscribe(data => {
         this.playerList = data;
       });
-    
+
 
     // this.loadCourseData();
 
