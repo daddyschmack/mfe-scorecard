@@ -23,7 +23,6 @@
        </button>
        <button (click)="addingPlayer = !addingPlayer">+ Add Player</button>
        <button (click)="toggleScoreType()">displaying {{scoreType()}} score</button>
-       <button (click)="toggleGameType()">Game: {{gameType() | titlecase}}</button>
      </div>
      {{addingPlayer}}
      @if(addingPlayer){
@@ -139,12 +138,12 @@
       <div class="stat-name team-name">Team {{team.teamId}}</div>
       <div class="hole-names">
         @for (holeScore of team.score.roundScore; track $index; let i = $index) {
-          <div class="score" [class.outcome-win]="holeScore.outcome === 'w'">
+          <div class="score" [class.outcome-win]="holeScore.outcome === 'w'">*
             {{ holeScore.netScore < 100 ? holeScore.netScore : '-' }}
           </div>
           @if(i === 8) { <div class="score">-</div> }
         }
-        <div class="score" style="border: 1px solid purple">{{ team.score.netScore }}</div>
+        <div class="score" style="border: 4px solid purple">{{ team.score.netScore }}</div>
       </div>
     </div>
     <div>
@@ -163,3 +162,7 @@
    </div>
 
 <button (click)="getRoundInfo()">debug</button>
+
+<div style="margin-top: 20px;">
+  <app-score-summary [teams]="scoredTeams()"></app-score-summary>
+</div>

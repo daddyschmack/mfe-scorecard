@@ -149,8 +149,8 @@ input[type=number] {
 }
 
 .score-display {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,8 +160,8 @@ input[type=number] {
 /* Score Coloring */
 .birdie, .eagle, .bogie, .ouch {
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;

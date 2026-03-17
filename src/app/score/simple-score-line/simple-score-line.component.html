@@ -10,14 +10,15 @@
         <div class="score" [attr.handicap]="getsAPop(i)">
           <!--
             [ngModel]: Binds the input to the data
-            (ngModelChange): Calls our update function when user types
+            (input): Handles validation and updates the model
             [class]: Applies 'birdie', 'bogie', etc.
           -->
           @if( scoreType() === "gross"){
-          <input type="number"
+          <input type="text"
+                 inputmode="numeric"
                  [class]="getScoreSymbol(i)"
                  [ngModel]="hole.totalScore"
-                 (ngModelChange)="updateScore(i, $event)">
+                 (input)="validateInput($event, i)">
           }
           @if(getsAPop(i) && scoreType() === "net"){
             <span >/{{hole.netScore}}</span>
