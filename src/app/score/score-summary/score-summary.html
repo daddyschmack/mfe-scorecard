@@ -1,0 +1,68 @@
+<app-collapsible [expanded]="true">
+  <div header>
+    <h3>Match Results</h3>
+  </div>
+
+  <div class="summary-content">
+    <div class="controls">
+        <button (click)="toggleComparisonType()">
+            Comparing: {{ comparisonType() | titlecase }}
+        </button>
+    </div>
+
+    @if (matches().length === 0) {
+      <p>No matches to display.</p>
+    } @else {
+      <table class="match-table">
+        <thead>
+          <tr>
+            <th>Matchup</th>
+            <th>Status</th>
+            <th>Winner</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (match of matches(); track $index) {
+            <tr>
+              <td>Team {{ match.teamA.teamId }} vs Team {{ match.teamB.teamId }}</td>
+              <td>{{ match.status }}</td>
+              <td>{{ match.winner ? 'Team ' + match.winner : '-' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+</app-collapsible>
+<hr>
+@for (match of matches(); track $index) {
+  <div class="match-detail-container">
+    <h4>Match: Team {{match.teamA.teamId}} vs Team {{match.teamB.teamId}}</h4>
+
+    <!-- Team A Row -->
+    <app-team-match-row
+        [team]="match.teamA"
+        [opponent]="match.teamB"
+        [scoreType]="comparisonType()">
+    </app-team-match-row>
+
+    <!-- Team B Row -->
+    <app-team-match-row
+        [team]="match.teamB"
+        [opponent]="match.teamA"
+        [scoreType]="comparisonType()">
+    </app-team-match-row>
+  </div>
+}
+
+<hr>
+
+<app-collapsible>
+  <div header>
+    <h3>Player Statistics</h3>
+  </div>
+
+  <div class="stats-content">
+    <p>Detailed statistics for each player.</p>
+  </div>
+</app-collapsible>
