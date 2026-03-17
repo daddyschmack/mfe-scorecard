@@ -1,0 +1,43 @@
+<div class="team-row">
+  <!-- Team Name -->
+  <div class="team-name">
+    Team {{ team().teamId }}
+  </div>
+
+  <!-- Scores Grid -->
+  <div class="scores-grid">
+    <!-- Front 9 -->
+    @for (score of scores().slice(0, 9); track $index) {
+      <div class="score-cell"
+           [class.winner]="isHoleWinner($index)"
+           [class.halved]="isHoleHalved($index)">
+        {{ score < 100 ? score : '-' }}
+      </div>
+    }
+    <!-- Front 9 Total -->
+    <div class="total-cell">
+      <div class="diff">{{ formatDifferential(getDifferential(0, 9)) }}</div>
+      <div class="won">{{ getHolesWon(0, 9) }}</div>
+    </div>
+
+    <!-- Back 9 -->
+    @for (score of scores().slice(9, 18); track $index) {
+      <div class="score-cell"
+           [class.winner]="isHoleWinner($index + 9)"
+           [class.halved]="isHoleHalved($index + 9)">
+        {{ score < 100 ? score : '-' }}
+      </div>
+    }
+    <!-- Back 9 Total -->
+    <div class="total-cell">
+      <div class="diff">{{ formatDifferential(getDifferential(9, 18)) }}</div>
+      <div class="won">{{ getHolesWon(9, 18) }}</div>
+    </div>
+
+    <!-- Grand Total -->
+    <div class="grand-total-cell">
+      <div class="diff">{{ formatDifferential(getDifferential(0, 18)) }}</div>
+      <div class="won">{{ getHolesWon(0, 18) }}</div>
+    </div>
+  </div>
+</div>

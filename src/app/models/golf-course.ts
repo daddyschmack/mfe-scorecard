@@ -44,6 +44,7 @@ export interface HoleData {
     par: number;
     distance?: number;
     hcap: number;
+    isTotal?: boolean;
 }
 
 export interface TeeBox {
@@ -80,6 +81,7 @@ export interface StatTotal {
   teeUUID?: string,
   teeColor?: string;
   totalScore: number ;
+  netScore?: number;
   teeShots?: number;
   fairwayStrokes?: number;
   totalPutts?: number;
@@ -107,13 +109,26 @@ export interface User {
 }
 
 export interface GolfTeam {
+  teamId: string;
   totalHandicap: number;
-  teamMembers: PlayerInfo[];
+  roster: GolfRound[];
+  score: TeamScore;
 }
 
-export interface TeamRound {
-  team: GolfTeam;
-  score: number;
+
+export interface TeamHoleScore{
+  holeNumber: number;
+  netScore: number;
+  grossScore: number;
+  outcome: 'w' | 'l';
+}
+
+export interface TeamScore {
+  numberOfBalls: number; // Right now, just the number of golfers to count
+  scoringType: 'net' | 'gross' | 'both';
+  netScore: number;
+  grossScore: number
   roundTime: number; // how many minutes it took to play
   roundDate: Date; // when the round was played
+  roundScore: TeamHoleScore[];
 }

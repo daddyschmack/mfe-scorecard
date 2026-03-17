@@ -1,0 +1,68 @@
+<div class="team-manager-container">
+
+  <!-- Configuration Panel -->
+  <div class="config-panel">
+    <h3>1. Select players({{selectedPlayers().length}}</h3>
+    <div class="player-selector">
+      @for(player of availablePlayers(); track player.name){
+        <label class="player-checkbox">
+          <input type="checkbox"
+                 [checked]="false"
+                 (change)="togglePlayerSelection(player, $event)">
+          {{player.name }} ({{player.handicap}})
+        </label>
+      }
+    </div>
+    <div class="controls">
+      <div class="control-group">
+        <label> Number of Teams:</label>
+        <input type="number" [(ngModel)]="numTeams" min="2">
+      </div>
+
+      <div class="control-group">
+        <label>Tolerance (+/-):</label>
+        <input type="number" [(ngModel)]="tolerance" min="0">
+      </div>
+
+      <button class="btn-blance"
+              [disabled]="selectedPlayers().length < numTeams()"
+              (click)="autoBalance()">
+        Auto Balance Teams
+      </button>
+    </div>
+  </div>
+
+  <!-- Drag & Drop Area -->
+  @if (teams().length > 0){
+    <h3> 2. Adjust Teams</h3>
+    <div class="team-board" cdkDropListGroup>
+      @for ( team of teams(); track team.teamId){
+        <div class="team-container">
+          <div class="team-header">
+            <h4>Team {{ team.teamId }}</h4>
+            <span class="team-total"
+                  [class.warn]="isToleranceBreached(getTeamTotal(team))">
+              Hcp: {{getTeamTotal(team)}}
+            </span>
+          </div>
+
+          <div class="player-list"
+               cdkDropList
+               [cdkDropListData]="team.roster"
+               (cdkDropListDropped)="drop($event)">
+            @for (round of team.roster; track round.id) {
+              <div class="player-box" cdkDrag [cdkDragData]="round">
+                <span class="name">{{round.golfer.displayName}}</span>
+                <span class="handicap">{{round.golfer.playerInfo?.handicap}}</span>
+              </div>
+            }
+            @if(team.roster.length === 0){
+              <div class="empty-placeholder">Drop player here</div>
+            }
+              </div>
+        </div>
+      }
+          </div>
+  }
+
+</div>

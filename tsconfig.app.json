@@ -7,11 +7,9 @@
     "types": []
   },
   "include": [
-    "src/**/*.ts",
-    "../golf-shell/projects/shared-data/src/**/*.ts"
+    "src/**/*.ts"
   ],
   "exclude": [
-    "src/**/*.spec.ts",
-    "../golf-shell/projects/shared-data/src/**/*.spec.ts"
+    "src/**/*.spec.ts"
   ]
 }

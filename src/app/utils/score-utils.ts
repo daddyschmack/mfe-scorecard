@@ -9,9 +9,12 @@ export function getScoreClass(score: number | undefined, par: number | undefined
   return 'ouch'; // Double bogey or worse
 }
 
-export function  checkHandicapHole(holeHandicap: number, golferHandicap: number): boolean{
+export function checkHandicapHole(holeHandicap: number, golferHandicap: number): boolean{
     // we will compare the user's handicap and determine if they get a stroke(s) on the hole
      return  holeHandicap <= golferHandicap;
 }
 
-
+export function getHoleHandicap(holes: any , holeNumber: number):number{
+     const hcap = holes?.[holeNumber]?.handicap;
+     return hcap;
+  }

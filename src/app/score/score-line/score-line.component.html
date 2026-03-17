@@ -10,13 +10,15 @@
       <div class="hole-names">
       <!-- Columns for Holes 1-18 -->
       @for (hole of holes(); track $index; let i = $index) {
+         @if(i + 1 == 10){
+             <div>score at 9</div>
+           } @else{
         <div class="cell input-cell">
 
           @if (row.isTotalRow) {
             <!-- Calculated Total Score (Read Only) -->
-             <div class="score-display" [class]="getScoreSymbol(row.key, i)"  [attr.handicap]="getsAPop(i)">
+             <div [class]="getScoreSymbol(row.key, i)"  [attr.handicap]="getsAPop(i)">
                {{ hole.totalScore || '-' }}
-            <div style="display: none">{{getsAPop(i)}}</div>
              </div>
           } @else if (row.showCheckbox) {
             <!-- Checkboxes -->
@@ -30,6 +32,7 @@
                    (ngModelChange)="updateStat(i, row.key, $event)">
           }
         </div>
+         }
       }
 
       <!-- 19th Column: Row Total -->

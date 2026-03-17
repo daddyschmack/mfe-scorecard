@@ -1,11 +1,68 @@
 /* Shared Score Styles */
 
+.scorecard-wrapper {
+  padding: 1rem;
+}
+
+.round-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  .course-info {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .tee-selector {
+    display: flex;
+    gap: 0.5rem;
+
+    .tee-box {
+      padding: 0.5rem 1rem;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+.players-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.team-header {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  border-top: 2px solid #333;
+  margin-top: 10px;
+}
+
+.outcome-win {
+  background-color: #d4edda; // Light Green
+  color: #155724; // Dark Green Text
+  position: relative;
+}
 
 .score-line {
   border: 1px solid #000;
   display: flex;
   background-color: #fff;
-    &.active{
+  &.active{
     background-color: yellow;
     font-weight: bold;
   }
@@ -19,11 +76,6 @@
     background-color: #a13014;
     color: #fff;
   }
-  & .total-cell{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-  }
 
   &:hover {
     border: 2px solid purple;
@@ -36,13 +88,19 @@
   grid-auto-flow: column; /* Forces items to flow horizontally */
   align-items: center;
   padding-left: 0.5rem;
+
+  select {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
 }
 
 .hole-names {
   background-color: #f5f5f5;
   flex: 1; /* Grow to fill all remaining space */
   display: grid;
-  grid-template-columns: repeat(19, 1fr);
+  grid-template-columns: repeat(20, 1fr);
 
   & .hole-info {
     background-color: #a13014;
@@ -58,17 +116,16 @@
     align-items: center;
     text-align: center;
     min-height: 2.5rem;
-    &.disabled{
-     opacity: 0.3;
-     color: #000;
-     cursor: not-allowed;
-
+    & .disabled{
+      color: #eeeeee;
+      cursor: not-allowed;
+      border: 1px solid red;
     }
   }
 }
 
 .player-name {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -92,8 +149,8 @@ input[type=number] {
 }
 
 .score-display {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,8 +160,8 @@ input[type=number] {
 /* Score Coloring */
 .birdie, .eagle, .bogie, .ouch {
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,3 +170,49 @@ input[type=number] {
 .birdie, .eagle { background: #fff; color: #000; }
 .bogie, .ouch { background: #fff; color: #000; border-width: 3px; border-radius: 4px; }
 .eagle, .ouch { border-style: double; }
+
+.total-cell{
+  font-size: 1.2rem;
+  font-weight: bold;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  .grossScore{
+    color: black;
+    padding-right:.2rem
+  }
+  .netScore{
+    color: green;
+  }
+}
+
+/* Add dots for handicap strokes */
+.score-display, .score {
+  position: relative; /* Anchor for absolute positioning */
+
+  /* 1 Stroke */
+  &[handicap="1"]::after {
+    content: '•';
+    position: absolute;
+    top: -8px; /* Adjust based on your cell height */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1;
+  }
+
+  /* 2 Strokes */
+  &[handicap="2"]::after {
+    content: '••';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1;
+    letter-spacing: -2px; /* Pull dots closer */
+  }
+}
