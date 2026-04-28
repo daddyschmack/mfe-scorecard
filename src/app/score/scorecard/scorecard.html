@@ -44,7 +44,23 @@
     <div class="team-manager-container">
       <app-team-manager [availablePlayers]="playerList" [(teams)]="generatedTeams"></app-team-manager>
     </div>
-  }
+    <hr>
+    <button (click)="loadRemoteManager()">Load team MFE </button>
+    <h2>Remote Team Manager</h2>
+    <div class="team-manager-container">
+      @if (teamManagerRemote()) {
+<ng-container
+  [ngComponentOutlet]="teamManagerRemote()"
+  [ngComponentOutletInputs]="{
+    availablePlayers: playerList
+  }">
+</ng-container>
+      } @else {
+        <p>Loading Remote Team Manager...</p>
+      }
+      <hr>
+   </div>
+      }
 <!-- loading indicator -->
    @if (isLoading()) {
      <div class="loading-container">

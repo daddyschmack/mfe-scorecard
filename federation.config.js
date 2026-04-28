@@ -2,14 +2,17 @@ const { withNativeFederation, shareAll } = require('@angular-architects/native-f
 
 module.exports = withNativeFederation({
   name: 'mfe-scorecard',
-  
+
   exposes: {
     './Component': './src/app/app.ts',
   },
 
   shared: {
     ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
-    'shared-data': { singleton: true, strictVersion: false }
+    'shared-data': { singleton: true, strictVersion: false },
+    '@angular/fire/app': {singleton: true, strictVersion: false},
+    '@angular/fire/auth': {singleton: true, strictVersion: false},
+    '@angular/fire/firestore': {singleton: true, strictVersion: false}
   },
 
   skip: [

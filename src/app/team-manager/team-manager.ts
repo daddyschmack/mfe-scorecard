@@ -15,6 +15,7 @@ import { GolfTeam, PlayerInfo, GolfRound, StatTotal } from '../models/golf-cours
 export class TeamManager {
   private balancer = inject(TeamBalancerService);
 
+
   // Inputs
   availablePlayers = input<Partial<PlayerInfo>[]>([]);
 
@@ -120,4 +121,5 @@ export class TeamManager {
     }
     return scoreArray;
   }
+
 }

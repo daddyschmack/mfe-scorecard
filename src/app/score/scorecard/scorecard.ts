@@ -1,4 +1,14 @@
-import { Component, computed, effect, inject, linkedSignal, signal, SimpleChange, untracked } from '@angular/core';
+import {
+  Component,
+  computed,
+  effect,
+  EnvironmentInjector,
+  inject,
+  linkedSignal,
+  signal,
+  SimpleChange,
+  untracked
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { SimpleScoreLineComponent } from '../simple-score-line/simple-score-line.component';
@@ -12,6 +22,7 @@ import { TeamManager} from '../../team-manager/team-manager';
 import { UserProfile, UserProfileService } from 'shared-data';
 import { checkHandicapHole } from '../../utils/score-utils';
 import { TeamBalancerService } from '../../services/team-balancer.service';
+import { loadRemoteModule } from '@angular-architects/native-federation';
 
 
 @Component({
@@ -27,6 +38,7 @@ export class Scorecard {
   private golfCourseService = inject(GolfCourseService);
   public userProfileService = inject(UserProfileService);
   public teamBalanceerService = inject(TeamBalancerService);
+  public teamManagerRemote = signal<any>(null);
 
   //UI State
   showTeamManager = signal(false); // add toggle state
@@ -210,6 +222,7 @@ export class Scorecard {
         })
       )
       .subscribe();
+
   }
 
 
@@ -234,6 +247,21 @@ export class Scorecard {
         })
       )
   )
+  loadRemoteManager(){
+    loadRemoteModule('mfe-teamManager','./Component')
+    .then((module: any) =>  {
+      console.log('REMOTE MODULE DOWNLOADED:', module);
+      console.log(' Is teammangerin module? ', !!module.TeamManager)
+      if(module.TeamManager){
+        this.teamManagerRemote.set(module.TeamManager);
+      }else if (module.default) {
+        this.teamManagerRemote.set(module.default);
+      }else {
+        console.error( 'TeamManager class not found in the loaded module')
+      }
+     })
+      .catch(error => console.error('Error loading remote manager'))
+  }
 
   getCourseResouceSignalMethod_BAd = toSignal(
     toObservable(this.selectedCourseId)
