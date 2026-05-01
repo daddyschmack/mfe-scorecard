@@ -52,7 +52,8 @@
 <ng-container
   [ngComponentOutlet]="teamManagerRemote()"
   [ngComponentOutletInputs]="{
-    availablePlayers: playerList
+    availablePlayers: playerList,
+    teams: generatedTeams()
   }">
 </ng-container>
       } @else {
@@ -71,7 +72,8 @@
 
   <!-- SCORECARD HEADER GRID -->
    @if(!isLoading()){
-     <div class="score-grid-header">
+     <div class="score-card-holder">
+      <div class="score-grid-header">
 
      <!-- Row 1: Hole Numbers -->
      <div class="score-line header-row">
@@ -143,7 +145,7 @@
    </div>
      }
    </div>
-
+     </div>
    }
 
 <!-- let's track the team score -->

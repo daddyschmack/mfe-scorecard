@@ -216,3 +216,10 @@ input[type=number] {
     letter-spacing: -2px; /* Pull dots closer */
   }
 }
+
+.score-card-holder{
+  overflow-x: auto;
+}
+.score-grid-header{
+  min-width: 1080px;
+}

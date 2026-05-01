@@ -97,6 +97,8 @@ export interface PlayerInfo {
   name: string;
   handicap?: number;
   GHIN?: number;
+  email?: string;
+  uid?: string;
 }
 export interface User {
   uid?: string;
