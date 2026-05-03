@@ -134,3 +134,12 @@ export interface TeamScore {
   roundDate: Date; // when the round was played
   roundScore: TeamHoleScore[];
 }
+
+export interface Game {
+  id: string;
+  courseId: string;
+  playDate: Date;
+  gameMode: 'Tournament' | 'Casual';
+  rounds: GolfRound[]; // store all the golf round in the game for revisit
+  teams: GolfTeam[];
+}

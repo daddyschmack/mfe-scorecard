@@ -1,13 +1,7 @@
 <div>
   <h2>MFE Scorecard (Remote)</h2>
 
-  @if (user()) {
-    <div style="background: #e0f7fa; padding: 10px; border-radius: 4px;">
-      <p><strong>User:</strong> {{ user()?.displayName }}</p>
-      <p><strong>Email:</strong> {{ user()?.email }}</p>
-      <p><strong>UID:</strong> {{ user()?.uid }}</p>
-    </div>
-  } @else {
+  @if (!user()) {
     <div style="background: #ffebee; padding: 2px; border-radius: 4px;">
       <h3>❌ No User Found</h3>
       <p>Please log in via the Shell.</p>
