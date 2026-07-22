@@ -25,7 +25,7 @@ export interface Course {
   unit: "Yards" | "Meter";
 }
 export interface GolfRound{
-  golfer: User;
+  golfer: Partial<User>;
   golfCourse?: Partial<GolfCourse>; // name id
   teeBox: Partial<TeeBox>; // color, par, slope, id, type
   round_date: Date;

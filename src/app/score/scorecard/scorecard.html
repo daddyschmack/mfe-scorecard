@@ -1,5 +1,9 @@
 <div class="scorecard-wrapper">
    <!-- Header Section -->
+  <hr>
+  TeamId:{{teamId()}}
+  gameid: {{gameId()}}
+  <hr>
    <header class="round-header">
      <div class="course-info">
           <select #courseSelect (change)="selectedCourseId.set(courseSelect.value)">

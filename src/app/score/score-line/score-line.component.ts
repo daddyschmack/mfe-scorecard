@@ -20,7 +20,7 @@ export class ScoreLineComponent implements AfterViewInit{
 
     private golfCourseService = inject(GolfCourseService);
   // Input Signals
-  player = input<User>({} as User);
+  player = input<Partial<User>>({});
   tees = input.required<TeeBox>();
 
 

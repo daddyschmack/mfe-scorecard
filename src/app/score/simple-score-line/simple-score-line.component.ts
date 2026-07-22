@@ -15,7 +15,7 @@ import { UserProfile } from 'shared-data';
 })
 export class SimpleScoreLineComponent {
   // 1. Inputs
-  player = input<User>({} as User);
+  player = input<Partial<User>>({});
   tees = input.required<TeeBox>();
   scoreType = input<'net' | 'gross'>('gross');
 
