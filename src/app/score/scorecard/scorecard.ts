@@ -133,6 +133,22 @@ export class Scorecard {
   constructor() {
 
     effect(() => {
+      const gId = this.gameId();
+      const tId = this.teamId();
+
+      if (gId && tId) {
+        console.log('Triggering fetch for:', { gId, tId });
+        this.gameService.getTeamRounds(gId, tId)
+          .pipe(
+            tap(rounds => console.log('Firestore Rounds found:', rounds)),
+            catchError(err => {
+              console.error('Fetch Error:', err);
+              return EMPTY;
+            })
+          ).subscribe();
+      }
+    });
+    effect(() => {
       console.group('🎮 Game Resource State Update');
       console.log('Status:', this.teamRoundsResource.status());
       console.log('Is Loading:', this.teamRoundsResource.isLoading());
